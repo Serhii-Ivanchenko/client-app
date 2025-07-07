@@ -1,7 +1,5 @@
-import RepairScreen from '../../components/RepairScreen/RepairScreen';
+import css from './RepairPage.module.css';
 
 export default function RepairPage() {
-  return (
-      <RepairScreen />
-  );
-}
+    return <div>RepairPage</div>;
+};

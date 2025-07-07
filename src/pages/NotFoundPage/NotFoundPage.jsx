@@ -7,7 +7,7 @@ export default function NotFoundPage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/main', { replace: true });
+      navigate('/garage', { replace: true });
     }, 3000);
 
     return () => clearTimeout(timer);
