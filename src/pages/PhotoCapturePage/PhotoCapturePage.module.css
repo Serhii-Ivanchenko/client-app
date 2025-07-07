@@ -1,0 +1,249 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 342px;
+  /* height: 660px; */
+  /* height: 100%; */
+  flex: 1;
+  min-height: 0;
+  /* justify-content: space-between; */
+  margin-left: auto;
+  margin-right: auto;
+  gap: 14px;
+}
+
+.wrapperDiag {
+  /* height: 570px; */
+}
+
+.photoSectionWrapper {
+  /* height: 477px; */
+  flex-grow: 1;
+  min-height: 130px;
+  /* max-height: 580px;
+  max-height: 72.139vh; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 161px 161px;
+  grid-auto-rows: 130px;
+  gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.absentPhotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 30px;
+  color: var(--main-gray);
+}
+
+.photoSectionWrapper::-webkit-scrollbar {
+  width: 4px;
+  padding-top: 4px;
+  /* height: 477px; */
+}
+
+.photoSectionWrapper::-webkit-scrollbar-track {
+  background-color: var(--bg);
+  border-radius: 4px;
+}
+
+.photoSectionWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--main-gray);
+  border-radius: 4px;
+}
+
+.photoWrapper {
+  position: relative;
+  width: 161px;
+  height: 130px;
+  overflow: hidden;
+
+  border-radius: 14px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.deleteBtn {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  border: none;
+  border-radius: 52px;
+  background: var(--red);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.deleteBtnIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.video {
+  /* height: 477px; */
+  width: 100%;
+  /* height: 66.169vh; */
+  height: 100%;
+}
+
+/* .videoDiag {
+  height: unset;
+} */
+.videoDiag {
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+.existedPhoto {
+  width: 161px;
+  height: 130px;
+  overflow: hidden;
+
+  border-radius: 14px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btnsWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 318px;
+  width: 100%;
+  padding: 1vh 21px 0;
+  gap: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: grid;
+  grid-template-columns: 1fr auto 1fr; */
+  align-items: end;
+  /* margin-top: auto; */
+}
+
+/* .cameraOn {
+  justify-content: flex-start;
+  gap: 20px;
+} */
+
+.cross {
+  fill: var(--bg-secondary);
+}
+
+.cancelBtn {
+  max-width: 70px;
+  max-height: 70px;
+  width: 8.706vh;
+  height: 8.706vh;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--red);
+}
+
+.cameraBtn {
+  width: 12.438vh;
+  height: 12.438vh;
+  max-width: 100px;
+  max-height: 100px;
+  border: none;
+  border-radius: 145px;
+  background-color: var(--light-gray);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cameraIcon {
+  width: 54px;
+  height: 43px;
+}
+
+.acceptBtn {
+  max-width: 70px;
+  max-height: 70px;
+  width: 8.706vh;
+  height: 8.706vh;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--green-btn-normal);
+}
+
+.check {
+  fill: var(--bg-secondary);
+}
+
+.photoPreviewWrapper {
+  position: relative;
+  max-width: 70px;
+  max-height: 70px;
+  width: 8.706vh;
+  height: 8.706vh;
+  /* width: clamp(70px, 8.706vh, 100px); */
+  /* height: auto; */
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emptyDiv {
+  width: 8.706vh;
+  height: 8.706vh;
+}
+
+.photoPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoQuantity {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  
+  font-size: 15px;
+}
+
+.approveIconWrapper {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: var(--green-btn-normal);
+}
+
+.approveIcon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}

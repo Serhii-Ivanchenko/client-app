@@ -1,0 +1,2849 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "code": "to_details",
+      "name": "Деталі для ТО",
+      "spareParts": [
+        {
+          "id": 11,
+          "code": "poly_v_belt",
+          "name": "Ремінь поліклиновий",
+          "tag": "one_side"
+        },
+        {
+          "id": 12,
+          "code": "cooling_pump",
+          "name": "Насос системи охолодження",
+          "tag": "one_side"
+        },
+        {
+          "id": 13,
+          "code": "thermostat",
+          "name": "Термостат",
+          "tag": "one_side"
+        },
+        {
+          "id": 14,
+          "code": "brake_pads",
+          "name": "Колодки гальмівні",
+          "tag": "two_side"
+        },
+        {
+          "id": 15,
+          "code": "drain_plug",
+          "name": "Пробка зливного отвору",
+          "tag": "one_side"
+        },
+        {
+          "id": 16,
+          "code": "wiper_blades",
+          "name": "Щітки склоочисника",
+          "tag": "two_side"
+        },
+        {
+          "id": 17,
+          "code": "oil_filter",
+          "name": "Фільтр масляний",
+          "tag": "one_side"
+        },
+        {
+          "id": 18,
+          "code": "air_filter",
+          "name": "Фільтр повітряний",
+          "tag": "one_side"
+        },
+        {
+          "id": 19,
+          "code": "fuel_filter",
+          "name": "Фільтр паливний",
+          "tag": "one_side"
+        },
+        {
+          "id": 110,
+          "code": "cabin_filter",
+          "name": "Фільтр салонний",
+          "tag": "one_side"
+        },
+        {
+          "id": 111,
+          "code": "spark_plugs",
+          "name": "Свічки запалювання",
+          "tag": "one_side"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "additional_equipment",
+      "name": "Додаткове обладнання",
+      "nodes": [
+        {
+          "id": 21,
+          "code": "trailer_equipment",
+          "name": "Причіпне обладнання",
+          "spareParts": [
+            {
+              "id": 211,
+              "code": "trailer_components",
+              "name": "Комплектуючі, навісні частини",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "code": "safety_system",
+          "name": "Система безпеки",
+          "spareParts": [
+            {
+              "id": 221,
+              "code": "airbag_system",
+              "name": "Система подушок безпеки",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": "engine",
+      "name": "Двигун",
+      "nodes": [
+        {
+          "id": 31,
+          "code": "engine_electronics",
+          "name": "Електроніка двигуна",
+          "spareParts": []
+        },
+        {
+          "id": 32,
+          "code": "crank_mechanism",
+          "name": "Крівошіпношатунний механізм",
+          "nodes": [
+            {
+              "id": 321,
+              "code": "crankshaft_assembly",
+              "name": "Колінчастий вал, вкладиші",
+              "spareParts": [
+                {
+                  "id": 3211,
+                  "code": "crankshaft",
+                  "name": "Колінчастий вал",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3212,
+                  "code": "crank_bearing",
+                  "name": "Вкладиш підшипника коленвала",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3213,
+                  "code": "crank_disk",
+                  "name": "Диск коленвалу",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3214,
+                  "code": "crank_gear",
+                  "name": "Шестерня коленвала",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 322,
+              "code": "flywheel",
+              "name": "Маховик",
+              "spareParts": [
+                {
+                  "id": 3221,
+                  "code": "flywheel",
+                  "name": "Маховик",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 323,
+              "code": "connecting_rod",
+              "name": "Шатун",
+              "spareParts": [
+                {
+                  "id": 3231,
+                  "code": "connecting_rod",
+                  "name": "Шатун",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3232,
+                  "code": "rod_bearing",
+                  "name": "Вкладиш нижній головки шатуна",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 324,
+              "code": "piston_assembly",
+              "name": "Поршень",
+              "spareParts": [
+                {
+                  "id": 3241,
+                  "code": "piston",
+                  "name": "Поршень",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3242,
+                  "code": "piston_ring_set",
+                  "name": "Комплект поршневих кілець",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 325,
+              "code": "seals_and_gaskets",
+              "name": "Сальник, комплекти ущільнень",
+              "spareParts": [
+                {
+                  "id": 3251,
+                  "code": "seals_gaskets",
+                  "name": "Сальник, комплекти ущільнень",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "code": "lubrication_system",
+          "name": "Система змащення",
+          "nodes": [
+            {
+              "id": 361,
+              "code": "oil_filter",
+              "name": "Фільтр масляний",
+              "spareParts": [
+                {
+                  "id": 3611,
+                  "code": "oil_filter",
+                  "name": "Фільтр масляний",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 362,
+              "code": "oil_radiator",
+              "name": "Радіатор масляний",
+              "spareParts": [
+                {
+                  "id": 3621,
+                  "code": "oil_radiator",
+                  "name": "Радіатор масляний",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3622,
+                  "code": "oil_radiator_gasket",
+                  "name": "Прокладка",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 363,
+              "code": "oil_pan",
+              "name": "Піддон масляний",
+              "spareParts": [
+                {
+                  "id": 3631,
+                  "code": "oil_pan",
+                  "name": "Піддон масляний",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3632,
+                  "code": "oil_pan_gasket",
+                  "name": "Прокладка",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3633,
+                  "code": "drain_plug",
+                  "name": "Пробка зливного отвору",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 364,
+              "code": "oil_pump_assembly",
+              "name": "Насос масляний, комплектуючі",
+              "spareParts": [
+                {
+                  "id": 3641,
+                  "code": "oil_pump",
+                  "name": "Насос масляний",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3642,
+                  "code": "oil_pump_gasket",
+                  "name": "Прокладка",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3643,
+                  "code": "intake_pipe",
+                  "name": "Впускная труба",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 365,
+              "code": "oil_pressure_sensor",
+              "name": "Датчик тиску масла",
+              "spareParts": [
+                {
+                  "id": 3651,
+                  "code": "oil_pressure_sensor",
+                  "name": "Датчик тиску масла",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 366,
+              "code": "oil_level_indicator",
+              "name": "Покажчик рівня масла",
+              "spareParts": [
+                {
+                  "id": 3661,
+                  "code": "oil_level_indicator",
+                  "name": "Покажчик рівня масла",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "code": "engine_mounts",
+          "name": "Кріплення двигуна",
+          "spareParts": [
+            {
+              "id": 371,
+              "code": "engine_bracket",
+              "name": "Кронштейн двигуна",
+              "tag": "one_side"
+            },
+            {
+              "id": 372,
+              "code": "engine_suspension",
+              "name": "Підвіска двигуна",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "code": "exhaust_gas_cleaning",
+          "name": "Система очищення ОГ",
+          "nodes": [
+            {
+              "id": 381,
+              "code": "egr_system",
+              "name": "Рециркуляція відпрацьованих газів",
+              "spareParts": [
+                {
+                  "id": 3811,
+                  "code": "egr_valve",
+                  "name": "Клапан системи рециркуляції ОГ (EGR)",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 3812,
+                  "code": "egr_gaskets",
+                  "name": "Прокладки",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "code": "engine_assembly",
+          "name": "Двигун в зборі, окремі частини двигуна",
+          "spareParts": [
+            {
+              "id": 391,
+              "code": "engine_assembly",
+              "name": "Двигун в зборі",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "code": "engine_casing",
+          "name": "Кожух двигуна",
+          "spareParts": [
+            {
+              "id": 401,
+              "code": "engine_casing",
+              "name": "Кожух двигуна",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "code": "belt_drive",
+          "name": "Ремінний привід",
+          "nodes": [
+            {
+              "id": 411,
+              "code": "poly_v_belt_drive",
+              "name": "Ремінь поліклиновий, ролики",
+              "spareParts": [
+                {
+                  "id": 4111,
+                  "code": "poly_v_belt",
+                  "name": "Ремінь поліклиновий",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4112,
+                  "code": "tensioner_pulley",
+                  "name": "Ролик натяжителя",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4113,
+                  "code": "idler_pulley",
+                  "name": "Ролик обвідний, що направляє",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 412,
+              "code": "pulley",
+              "name": "Шків",
+              "spareParts": [
+                {
+                  "id": 4121,
+                  "code": "pulley",
+                  "name": "Шків",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 413,
+              "code": "alternator_freewheel",
+              "name": "Механізм вільного ходу генератора",
+              "spareParts": [
+                {
+                  "id": 4131,
+                  "code": "alternator_freewheel",
+                  "name": "Механізм вільного ходу генератора",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "code": "gaskets",
+          "name": "Прокладки",
+          "spareParts": [
+            {
+              "id": 421,
+              "code": "gasket_kit",
+              "name": "Комплект прокладок",
+              "tag": "one_side"
+            },
+            {
+              "id": 422,
+              "code": "cylinder_head_gasket",
+              "name": "Прокладка головки циліндра",
+              "tag": "one_side"
+            },
+            {
+              "id": 423,
+              "code": "valve_cover_gasket",
+              "name": "Прокладка клапанної кришки",
+              "tag": "one_side"
+            },
+            {
+              "id": 424,
+              "code": "intake_manifold_gasket",
+              "name": "Прокладка впускного колектора",
+              "tag": "one_side"
+            },
+            {
+              "id": 425,
+              "code": "exhaust_manifold_gasket",
+              "name": "Прокладка випускного колектора",
+              "tag": "one_side"
+            },
+            {
+              "id": 426,
+              "code": "turbocharger_gasket",
+              "name": "Прокладка турбонагнетателя",
+              "tag": "one_side"
+            },
+            {
+              "id": 427,
+              "code": "fuel_system_seal",
+              "name": "Герметизація паливної системи",
+              "tag": "one_side"
+            },
+            {
+              "id": 428,
+              "code": "cooling_system_seal",
+              "name": "Герметизація охолоджуючої рідини",
+              "tag": "one_side"
+            },
+            {
+              "id": 429,
+              "code": "oil_circulation_seal",
+              "name": "Герметизація в ситеме циркуляції масла",
+              "tag": "one_side"
+            },
+            {
+              "id": 430,
+              "code": "seal_and_gasket_kit",
+              "name": "Сальники, комплект ущільнень",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "code": "mixture_preparation",
+          "name": "Приготування суміші",
+          "nodes": [
+            {
+              "id": 431,
+              "code": "throttle_plate",
+              "name": "Заслінка дросельна (патрубок, фланець)",
+              "spareParts": [
+                {
+                  "id": 4311,
+                  "code": "throttle_plate_gasket",
+                  "name": "Прокладка дросельної заслінки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4312,
+                  "code": "throttle_plate_sensor",
+                  "name": "Датчик дросельної заслінки",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 432,
+              "code": "idle_control",
+              "name": "Управління холостим ходом",
+              "spareParts": []
+            },
+            {
+              "id": 433,
+              "code": "maf_sensor",
+              "name": "Датчик масової витрати повітря",
+              "spareParts": [
+                {
+                  "id": 4331,
+                  "code": "maf_sensor",
+                  "name": "Датчик масової витрати повітря",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 434,
+              "code": "switch_relay",
+              "name": "Вимикач, реле",
+              "spareParts": [
+                {
+                  "id": 4341,
+                  "code": "switch_relay",
+                  "name": "Вимикач, реле",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 435,
+              "code": "oxygen_sensor",
+              "name": "Датчик кисню",
+              "spareParts": [
+                {
+                  "id": 4351,
+                  "code": "oxygen_sensor",
+                  "name": "Датчик кисню",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "code": "ignition_system",
+          "name": "Система запалювання, розжарення",
+          "spareParts": [
+            {
+              "id": 441,
+              "code": "ignition_coil",
+              "name": "Котушка запалювання",
+              "tag": "one_side"
+            },
+            {
+              "id": 442,
+              "code": "spark_plugs",
+              "name": "Свічки запалювання",
+              "tag": "one_side"
+            },
+            {
+              "id": 443,
+              "code": "impulse_generator",
+              "name": "Генератор імпульсів",
+              "tag": "one_side"
+            },
+            {
+              "id": 444,
+              "code": "control_unit",
+              "name": "Блок управління, реле",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "code": "cylinder_head",
+          "name": "Головка циліндра",
+          "spareParts": [
+            {
+              "id": 451,
+              "code": "valve_cover_gasket",
+              "name": "Прокладка клапанної кришки",
+              "tag": "one_side"
+            },
+            {
+              "id": 452,
+              "code": "cylinder_head_gasket",
+              "name": "Прокладка головки циліндра",
+              "tag": "one_side"
+            },
+            {
+              "id": 453,
+              "code": "valve_cover",
+              "name": "Кришка клапанна",
+              "tag": "one_side"
+            },
+            {
+              "id": 454,
+              "code": "oil_fill_cap",
+              "name": "Кришка маслозаливной горловини",
+              "tag": "one_side"
+            },
+            {
+              "id": 455,
+              "code": "cylinder_head",
+              "name": "Головка циліндра",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "code": "air_supply_system",
+          "name": "Система подачі повітря",
+          "nodes": [
+            {
+              "id": 461,
+              "code": "air_filter_assembly",
+              "name": "Корпус повітряного фільтра",
+              "spareParts": [
+                {
+                  "id": 4611,
+                  "code": "cap_sub_assy_air_cleaner",
+                  "name": "Cap Sub-assy, Air Cleaner",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4612,
+                  "code": "air_filter",
+                  "name": "Фільтр повітряний",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 462,
+              "code": "throttle_cable",
+              "name": "Тросик газу",
+              "spareParts": [
+                {
+                  "id": 4621,
+                  "code": "throttle_cable",
+                  "name": "Тросик газу",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 463,
+              "code": "intake_manifold",
+              "name": "Колектор впускний",
+              "spareParts": [
+                {
+                  "id": 4631,
+                  "code": "intake_manifold",
+                  "name": "Intake Manifold",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4632,
+                  "code": "intake_manifold_gasket",
+                  "name": "Прокладка впускного колектора",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 464,
+              "code": "throttle_plate_assembly",
+              "name": "Заслінка дросельна",
+              "spareParts": [
+                {
+                  "id": 4641,
+                  "code": "throttle_plate_gasket",
+                  "name": "Прокладка дросельної заслінки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4642,
+                  "code": "throttle_plate_sensor",
+                  "name": "Датчик дросельної заслінки",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 465,
+              "code": "air_boosting_system",
+              "name": "Система нагнітання повітря",
+              "spareParts": [
+                {
+                  "id": 4651,
+                  "code": "compressor",
+                  "name": "Компресор",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4652,
+                  "code": "compressor_gasket",
+                  "name": "Прокладка компресора",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 466,
+              "code": "regulation_management",
+              "name": "Регулювання, управління",
+              "spareParts": []
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "code": "valve_mechanism",
+          "name": "Механізм газорозподілу",
+          "nodes": [
+            {
+              "id": 471,
+              "code": "camshaft_chain",
+              "name": "Ланцюг приводу ГРМ",
+              "spareParts": [
+                {
+                  "id": 4711,
+                  "code": "camshaft_chain",
+                  "name": "Ланцюг приводу распредвала",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4712,
+                  "code": "stabilizer_bar",
+                  "name": "Планка успокоителя",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4713,
+                  "code": "tensioner_bar",
+                  "name": "Планка натягача",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4714,
+                  "code": "chain_tensioner",
+                  "name": "Натяжитель ланцюга",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 472,
+              "code": "gears",
+              "name": "Шестерні",
+              "spareParts": [
+                {
+                  "id": 4721,
+                  "code": "gears",
+                  "name": "Шестерні",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 473,
+              "code": "rocker_arm",
+              "name": "Шток",
+              "spareParts": [
+                {
+                  "id": 4731,
+                  "code": "rocker_arm",
+                  "name": "Шток",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 474,
+              "code": "valve_regulation",
+              "name": "Клапан, регулювання",
+              "spareParts": [
+                {
+                  "id": 4741,
+                  "code": "intake_valve",
+                  "name": "Впускний клапан",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4742,
+                  "code": "exhaust_valve",
+                  "name": "Випускний клапан",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4743,
+                  "code": "valve_gap_adjuster",
+                  "name": "Пластина регулювання зазору клапана",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4744,
+                  "code": "valve_stem_gasket",
+                  "name": "Прокладка стрижень",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4745,
+                  "code": "valve_guide",
+                  "name": "Напрямна клапана",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4746,
+                  "code": "balancer",
+                  "name": "Коромисло, балансир",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 4747,
+                  "code": "valve_actuation",
+                  "name": "Приведення в дію клапанів",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "code": "engine_block",
+          "name": "Блок-картер",
+          "spareParts": [
+            {
+              "id": 481,
+              "code": "engine_block",
+              "name": "Блок-картер",
+              "tag": "one_side"
+            },
+            {
+              "id": 482,
+              "code": "ventilation",
+              "name": "Вентиляція",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "fuel_system",
+      "name": "Паливна система",
+      "nodes": [
+        {
+          "id": 151,
+          "code": "fuel_injector",
+          "name": "Паливний інжектор",
+          "spareParts": [
+            {
+              "id": 1511,
+              "code": "fuel_injector_gasket",
+              "name": "Прокладка",
+              "tag": "one_side"
+            },
+            {
+              "id": 1512,
+              "code": "fuel_injector_nozzle",
+              "name": "Форсунка, розпилювач, насос-форсунка",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 152,
+          "code": "fuel_line",
+          "name": "Паливопровід",
+          "spareParts": [
+            {
+              "id": 1521,
+              "code": "fuel_line",
+              "name": "Паливопровід",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 153,
+          "code": "fuel_tank",
+          "name": "Бак паливний",
+          "spareParts": [
+            {
+              "id": 1531,
+              "code": "fuel_tank_assembly",
+              "name": "Паливний бак в зборі",
+              "tag": "one_side"
+            },
+            {
+              "id": 1532,
+              "code": "fuel_tank_filler",
+              "name": "Pipe Sub-assy, Fuel Tank Filler",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 154,
+          "code": "fuel_pump_assembly",
+          "name": "Насос паливний, комплектуючі",
+          "spareParts": [
+            {
+              "id": 1541,
+              "code": "fuel_pump",
+              "name": "Насос паливний",
+              "tag": "one_side"
+            },
+            {
+              "id": 1542,
+              "code": "repair_kit",
+              "name": "Ремкомплект",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 155,
+          "code": "fuel_filter",
+          "name": "Фільтр паливний",
+          "spareParts": [
+            {
+              "id": 1551,
+              "code": "fuel_filter",
+              "name": "Фільтр паливний",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "code": "cooling_system",
+      "name": "Система охолодження",
+      "nodes": [
+        {
+          "id": 51,
+          "code": "cooling_pump",
+          "name": "Насос системи охолодження, прокладка",
+          "spareParts": [
+            {
+              "id": 511,
+              "code": "cooling_pump",
+              "name": "Насос системи охолодження",
+              "tag": "one_side"
+            },
+            {
+              "id": 512,
+              "code": "cooling_pump_gasket",
+              "name": "Прокладка",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "code": "thermostat_assembly",
+          "name": "Термостат, прокладка термостата",
+          "spareParts": [
+            {
+              "id": 521,
+              "code": "thermostat_body",
+              "name": "Корпус термостата",
+              "tag": "one_side"
+            },
+            {
+              "id": 522,
+              "code": "thermostat",
+              "name": "Термостат",
+              "tag": "one_side"
+            },
+            {
+              "id": 523,
+              "code": "thermostat_gasket",
+              "name": "Прокладка термостата",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "code": "water_radiator",
+          "name": "Радіатор водяний",
+          "spareParts": [
+            {
+              "id": 531,
+              "code": "cooling_radiator",
+              "name": "Радіатор системи охолодження",
+              "tag": "one_side"
+            },
+            {
+              "id": 532,
+              "code": "radiator_mount",
+              "name": "Кріплення радіатора",
+              "tag": "one_side"
+            },
+            {
+              "id": 533,
+              "code": "expansion_tank",
+              "name": "Розширювальний бачок",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "code": "coolant_hoses",
+          "name": "Патрубки системи охолодження",
+          "spareParts": [
+            {
+              "id": 541,
+              "code": "coolant_hoses",
+              "name": "Патрубки системи охолодження",
+              "tag": "one_side"
+            },
+            {
+              "id": 542,
+              "code": "flange",
+              "name": "Фланець",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "code": "cooling_switch_sensor",
+          "name": "Вимикач, датчик",
+          "spareParts": [
+            {
+              "id": 551,
+              "code": "cooling_switch_sensor",
+              "name": "Вимикач, датчик",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 56,
+          "code": "radiator_fan",
+          "name": "Вентилятор охолодження радіатора",
+          "spareParts": [
+            {
+              "id": 561,
+              "code": "radiator_fan",
+              "name": "Вентилятор охолодження радіатора",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "code": "exhaust_system",
+      "name": "Система випуску",
+      "nodes": [
+        {
+          "id": 61,
+          "code": "exhaust_temp_sensor",
+          "name": "Датчик температури вихлопних газів",
+          "spareParts": [
+            {
+              "id": 611,
+              "code": "exhaust_temp_sensor",
+              "name": "Датчик температури вихлопних газів",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "code": "exhaust_neutralization",
+          "name": "Нейтралізація ОГ",
+          "nodes": [
+            {
+              "id": 621,
+              "code": "egr_recirculation",
+              "name": "Рециркуляція ОГ (EGR)",
+              "spareParts": [
+                {
+                  "id": 6211,
+                  "code": "egr_valve",
+                  "name": "Клапан системи рециркуляції ОГ (EGR)",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 6212,
+                  "code": "egr_gaskets",
+                  "name": "Прокладки",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 63,
+          "code": "exhaust_assembly",
+          "name": "Глушник в зборі",
+          "nodes": [
+            {
+              "id": 631,
+              "code": "catalytic_converter",
+              "name": "Каталізатор",
+              "spareParts": [
+                {
+                  "id": 6311,
+                  "code": "catalytic_converter",
+                  "name": "Каталізатор",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 632,
+              "code": "exhaust_pipes",
+              "name": "Труби",
+              "spareParts": [
+                {
+                  "id": 6321,
+                  "code": "exhaust_pipes",
+                  "name": "Труби",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 64,
+          "code": "oxygen_sensor",
+          "name": "Датчик кисню",
+          "spareParts": [
+            {
+              "id": 641,
+              "code": "oxygen_sensor",
+              "name": "Датчик кисню",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 65,
+          "code": "exhaust_manifold",
+          "name": "Колектор випускний",
+          "spareParts": [
+            {
+              "id": 651,
+              "code": "manifold",
+              "name": "Manifold",
+              "tag": "one_side"
+            },
+            {
+              "id": 652,
+              "code": "exhaust_manifold_gasket",
+              "name": "Прокладка випускного колектора",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 66,
+          "code": "turbocharger",
+          "name": "Турбокомпрессор",
+          "spareParts": [
+            {
+              "id": 661,
+              "code": "turbocharger",
+              "name": "Турбокомпрессор",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 67,
+          "code": "exhaust_mounting_details",
+          "name": "Деталі монтажу",
+          "nodes": [
+            {
+              "id": 671,
+              "code": "mounting_elements",
+              "name": "Монтажні елементи",
+              "spareParts": [
+                {
+                  "id": 6711,
+                  "code": "mounting_gasket",
+                  "name": "Прокладка",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 6712,
+                  "code": "rubber_strips",
+                  "name": "Гумові смужки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 6713,
+                  "code": "mounting_bracket",
+                  "name": "Кронштейн",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "code": "transmission",
+      "name": "Трансмісія",
+      "nodes": [
+        {
+          "id": 71,
+          "code": "clutch_system",
+          "name": "Система зчеплення",
+          "nodes": [
+            {
+              "id": 711,
+              "code": "clutch_kit",
+              "name": "Комплект зчеплення",
+              "spareParts": [
+                {
+                  "id": 7111,
+                  "code": "clutch_kit",
+                  "name": "Комплект зчеплення",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 712,
+              "code": "clutch_basket",
+              "name": "Кошик зчеплення",
+              "spareParts": [
+                {
+                  "id": 7121,
+                  "code": "clutch_basket",
+                  "name": "Кошик зчеплення",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 713,
+              "code": "clutch_disc",
+              "name": "Диск зчеплення",
+              "spareParts": [
+                {
+                  "id": 7131,
+                  "code": "clutch_disc",
+                  "name": "Диск зчеплення",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 714,
+              "code": "throw_bearing",
+              "name": "Підшипник вижимний",
+              "spareParts": [
+                {
+                  "id": 7141,
+                  "code": "throw_bearing",
+                  "name": "Центральний вимикач",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 715,
+              "code": "clutch_control",
+              "name": "Система управління зчепленням",
+              "spareParts": [
+                {
+                  "id": 7151,
+                  "code": "master_cylinder",
+                  "name": "Головний циліндр",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 7152,
+                  "code": "slave_cylinder",
+                  "name": "Робочий циліндр",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 7153,
+                  "code": "linkage_hoses",
+                  "name": "Сполучні елементи / шланги",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 716,
+              "code": "clutch_flywheel",
+              "name": "Маховик",
+              "spareParts": [
+                {
+                  "id": 7161,
+                  "code": "clutch_flywheel",
+                  "name": "Маховик",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 72,
+          "code": "manual_transmission",
+          "name": "Механічна коробка перемикання передач",
+          "spareParts": [
+            {
+              "id": 721,
+              "code": "manual_transmission_gaskets",
+              "name": "Прокладки",
+              "tag": "one_side"
+            },
+            {
+              "id": 722,
+              "code": "gear_shift_control",
+              "name": "Управління передач",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 73,
+          "code": "automatic_transmission",
+          "name": "Автоматична коробка передач",
+          "spareParts": [
+            {
+              "id": 731,
+              "code": "automatic_transmission_seals",
+              "name": "Сальники",
+              "tag": "one_side"
+            },
+            {
+              "id": 732,
+              "code": "automatic_transmission_radiator",
+              "name": "Радіатор",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 74,
+          "code": "drivetrain",
+          "name": "Привід колеса",
+          "spareParts": [
+            {
+              "id": 741,
+              "code": "drive_shaft",
+              "name": "Приводний вал",
+              "tag": "one_side"
+            },
+            {
+              "id": 742,
+              "code": "cv_joint",
+              "name": "ШРУС",
+              "tag": "one_side"
+            },
+            {
+              "id": 743,
+              "code": "hub_bearing",
+              "name": "Пильник",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "code": "final_drive",
+          "name": "Головна передача",
+          "nodes": [
+            {
+              "id": 751,
+              "code": "differential",
+              "name": "Диференціал",
+              "spareParts": [
+                {
+                  "id": 7511,
+                  "code": "gear_kit",
+                  "name": "Gear Kit",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 7512,
+                  "code": "seal_gasket",
+                  "name": "Seal, Gasket",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "code": "chassis",
+      "name": "Ходова частина",
+      "nodes": [
+        {
+          "id": 81,
+          "code": "suspension_spring",
+          "name": "Пружина підвіски",
+          "spareParts": [
+            {
+              "id": 811,
+              "code": "coil_spring",
+              "name": "Гвинтові пружини",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 82,
+          "code": "shock_absorber",
+          "name": "Амортизатор підвіски",
+          "spareParts": [
+            {
+              "id": 821,
+              "code": "shock_absorber",
+              "name": "Амортизатор",
+              "tag": "one_side"
+            },
+            {
+              "id": 822,
+              "code": "shock_cowl",
+              "name": "Пилозахисний чохол амортизатора",
+              "tag": "one_side"
+            },
+            {
+              "id": 823,
+              "code": "shock_buffer",
+              "name": "Буфер амортизатора",
+              "tag": "one_side"
+            },
+            {
+              "id": 824,
+              "code": "shock_mount",
+              "name": "Опора амортизатора підвіски",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 83,
+          "code": "air_suspension",
+          "name": "Пневматична підвіска",
+          "spareParts": [
+            {
+              "id": 831,
+              "code": "air_suspension_compressor",
+              "name": "Компресор",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 84,
+          "code": "suspension_links",
+          "name": "Важелі і тяги підвіски",
+          "spareParts": [
+            {
+              "id": 841,
+              "code": "suspension_link",
+              "name": "Важіль (поперечний, діагональний, поздовжній)",
+              "tag": "one_side"
+            },
+            {
+              "id": 842,
+              "code": "suspension_link_mount",
+              "name": "Кріплення важеля підвіски",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 85,
+          "code": "stabilizer",
+          "name": "Стабілізатор, кріплення",
+          "spareParts": [
+            {
+              "id": 851,
+              "code": "stabilizer_bush",
+              "name": "Втулка стійки стабілізатора",
+              "tag": "one_side"
+            },
+            {
+              "id": 852,
+              "code": "stabilizer",
+              "name": "Стабілізатор",
+              "tag": "one_side"
+            },
+            {
+              "id": 853,
+              "code": "stabilizer_mount",
+              "name": "Стойка стабілізатора, втулки стабілізатора",
+              "tag": "one_side"
+            },
+            {
+              "id": 854,
+              "code": "mounting_details",
+              "name": "Деталі кріплення",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 86,
+          "code": "wheel_hub",
+          "name": "Маточина колеса, складові",
+          "spareParts": [
+            {
+              "id": 861,
+              "code": "wheel_hub",
+              "name": "Маточина колеса",
+              "tag": "one_side"
+            },
+            {
+              "id": 862,
+              "code": "wheel_bearing",
+              "name": "Підшипник ступичний",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 87,
+          "code": "steering_knuckle",
+          "name": "Кулак поворотний, складові",
+          "spareParts": [
+            {
+              "id": 871,
+              "code": "steering_knuckle",
+              "name": "Поворотний кулак",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 88,
+          "code": "axle_beam",
+          "name": "Балка моста, підвіска осі",
+          "spareParts": [
+            {
+              "id": 881,
+              "code": "axle_beam",
+              "name": "Балка моста",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "code": "steering",
+      "name": "Рульове управління",
+      "nodes": [
+        {
+          "id": 91,
+          "code": "power_steering_system",
+          "name": "Система гідропідсилювача керма",
+          "spareParts": [
+            {
+              "id": 911,
+              "code": "power_steering_pump",
+              "name": "Насос ГУР",
+              "tag": "one_side"
+            },
+            {
+              "id": 912,
+              "code": "power_steering_hoses",
+              "name": "Шланги ГУР",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 92,
+          "code": "steering_rack",
+          "name": "Рейка рульова",
+          "spareParts": [
+            {
+              "id": 921,
+              "code": "steering_rack",
+              "name": "Рейка рульова",
+              "tag": "one_side"
+            },
+            {
+              "id": 922,
+              "code": "power_steering_kit",
+              "name": "Комплект прокладок, гідропідсилювач керма",
+              "tag": "one_side"
+            },
+            {
+              "id": 923,
+              "code": "steering_link",
+              "name": "Тяга рульова",
+              "tag": "one_side"
+            },
+            {
+              "id": 924,
+              "code": "steering_link_end",
+              "name": "Наконечник рульової тяги",
+              "tag": "one_side"
+            },
+            {
+              "id": 925,
+              "code": "steering_rack_guard",
+              "name": "Пильник рульової рейки",
+              "tag": "one_side"
+            },
+            {
+              "id": 926,
+              "code": "steering_suspension",
+              "name": "Підвіска рульового управління",
+              "tag": "one_side"
+            },
+            {
+              "id": 927,
+              "code": "steering_mechanism_casing",
+              "name": "Картер рульового механізму (прокладки)",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 93,
+          "code": "steering_column",
+          "name": "Рульова колонка",
+          "spareParts": [
+            {
+              "id": 931,
+              "code": "steering_column",
+              "name": "Рульова колонка",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "code": "braking_system",
+      "name": "Гальмівна система",
+      "nodes": [
+        {
+          "id": 101,
+          "code": "disc_brake",
+          "name": "Дискове гальмо",
+          "spareParts": [
+            {
+              "id": 1011,
+              "code": "caliper_pin",
+              "name": "Штифт гальмівного супорта",
+              "tag": "one_side"
+            },
+            {
+              "id": 1012,
+              "code": "caliper_repair_kit",
+              "name": "Ремкомплект гальмівного супорта",
+              "tag": "one_side"
+            },
+            {
+              "id": 1013,
+              "code": "caliper_piston",
+              "name": "Поршень гальмівного супорта",
+              "tag": "one_side"
+            },
+            {
+              "id": 1014,
+              "code": "brake_disc",
+              "name": "Диск гальмівний",
+              "tag": "one_side"
+            },
+            {
+              "id": 1015,
+              "code": "brake_pads",
+              "name": "Колодки гальмівні",
+              "tag": "two_side"
+            },
+            {
+              "id": 1016,
+              "code": "brake_system_details",
+              "name": "Деталі гальмівної системи",
+              "tag": "one_side"
+            },
+            {
+              "id": 1017,
+              "code": "brake_caliper_mount",
+              "name": "Супорт гальмівний, кріплення",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "code": "parking_brake",
+          "name": "Гальмо стоянки",
+          "spareParts": [
+            {
+              "id": 1021,
+              "code": "parking_brake_components",
+              "name": "Троси, тяги і важелі гальмівної системи",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "code": "brake_hoses",
+          "name": "Шланги гальмівні",
+          "spareParts": [
+            {
+              "id": 1031,
+              "code": "brake_hoses",
+              "name": "Шланги гальмівні",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 104,
+          "code": "brake_booster",
+          "name": "Гальмівний підсилювач",
+          "spareParts": [
+            {
+              "id": 1041,
+              "code": "brake_booster",
+              "name": "Гальмівний підсилювач",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 105,
+          "code": "master_brake_cylinder",
+          "name": "Головний гальмівний циліндр",
+          "spareParts": [
+            {
+              "id": 1051,
+              "code": "master_brake_cylinder",
+              "name": "Головний гальмівний циліндр",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 106,
+          "code": "abs_regulation",
+          "name": "Регулювання динаміки руху",
+          "spareParts": [
+            {
+              "id": 1061,
+              "code": "abs_sensor",
+              "name": "Датчик АБС",
+              "tag": "one_side"
+            },
+            {
+              "id": 1062,
+              "code": "abs_modulator",
+              "name": "Модулятор АБС",
+              "tag": "one_side"
+            },
+            {
+              "id": 1063,
+              "code": "abs_control_unit",
+              "name": "Блок управління АБС/датчики/реле",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 107,
+          "code": "brake_light_switch",
+          "name": "Вимикач ліхтаря сигналу гальмування",
+          "spareParts": [
+            {
+              "id": 1071,
+              "code": "brake_light_switch",
+              "name": "Вимикач ліхтаря сигналу гальмування",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "code": "electrical_equipment",
+      "name": "Електрообладнання",
+      "nodes": [
+        {
+          "id": 111,
+          "code": "starter_system",
+          "name": "Система стартера",
+          "spareParts": [
+            {
+              "id": 1111,
+              "code": "starter",
+              "name": "Стартер",
+              "tag": "one_side"
+            },
+            {
+              "id": 1112,
+              "code": "starter_details",
+              "name": "Стартер, деталі стартера",
+              "tag": "one_side"
+            },
+            {
+              "id": 1113,
+              "code": "starter_relay",
+              "name": "Тягове реле стартера",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 112,
+          "code": "alternator_components",
+          "name": "Генератор складові",
+          "spareParts": [
+            {
+              "id": 1121,
+              "code": "alternator_pulley",
+              "name": "Шків генератора змінного струму",
+              "tag": "one_side"
+            },
+            {
+              "id": 1122,
+              "code": "alternator_freewheel",
+              "name": "Механізм вільного ходу генератора",
+              "tag": "one_side"
+            },
+            {
+              "id": 1123,
+              "code": "alternator",
+              "name": "Генератор",
+              "tag": "one_side"
+            },
+            {
+              "id": 1124,
+              "code": "alternator_regulator",
+              "name": "Регулятор",
+              "tag": "one_side"
+            },
+            {
+              "id": 1125,
+              "code": "starter_duplicate",
+              "name": "Стартер",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 113,
+          "code": "battery",
+          "name": "Акумулятор",
+          "spareParts": [
+            {
+              "id": 1131,
+              "code": "battery",
+              "name": "Акумулятор",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 114,
+          "code": "lighting_system",
+          "name": "Система освітлення",
+          "nodes": [
+            {
+              "id": 1141,
+              "code": "rear_lights",
+              "name": "Задні ліхтарі/запчастини",
+              "spareParts": [
+                {
+                  "id": 11411,
+                  "code": "rear_light",
+                  "name": "Задній ліхтар",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 11412,
+                  "code": "additional_stop_signal",
+                  "name": "Додатковий стоп-сигнал",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 11413,
+                  "code": "rear_fog_light",
+                  "name": "Задня протитуманна фара",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 11414,
+                  "code": "reverse_light",
+                  "name": "Фара заднього ходу",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1142,
+              "code": "headlights",
+              "name": "Головний світло, складові",
+              "spareParts": [
+                {
+                  "id": 11421,
+                  "code": "headlight",
+                  "name": "Головний світло",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 11422,
+                  "code": "main_headlamp",
+                  "name": "Лампа розжарювання основної фари",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1143,
+              "code": "additional_lighting",
+              "name": "Додаткове освітлення",
+              "spareParts": [
+                {
+                  "id": 11431,
+                  "code": "additional_headlight",
+                  "name": "Фара",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1144,
+              "code": "interior_lighting",
+              "name": "Внутрішнє освітлення",
+              "spareParts": [
+                {
+                  "id": 11441,
+                  "code": "cabin_lighting",
+                  "name": "Освітлення салону",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1145,
+              "code": "reflector",
+              "name": "Відбивач",
+              "spareParts": [
+                {
+                  "id": 11451,
+                  "code": "reflector",
+                  "name": "Відбивач",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1146,
+              "code": "lighting_control",
+              "name": "Вимикач, реле, блок управління освітлення",
+              "spareParts": [
+                {
+                  "id": 11461,
+                  "code": "lighting_switch",
+                  "name": "Вимикач",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 115,
+          "code": "sensors",
+          "name": "Датчики",
+          "spareParts": [
+            {
+              "id": 1151,
+              "code": "sensors",
+              "name": "Датчики",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 116,
+          "code": "control_instruments",
+          "name": "Контрольні прилади",
+          "spareParts": [
+            {
+              "id": 1161,
+              "code": "control_sensors",
+              "name": "Датчики",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 117,
+          "code": "window_cleaning_system",
+          "name": "Система очищення вікон",
+          "nodes": [
+            {
+              "id": 1171,
+              "code": "wiper_blades",
+              "name": "Щітки склоочисника",
+              "spareParts": [
+                {
+                  "id": 11711,
+                  "code": "wiper_blades",
+                  "name": "Щітки склоочисника",
+                  "tag": "two_side"
+                }
+              ]
+            },
+            {
+              "id": 1172,
+              "code": "wiper_motor",
+              "name": "Двигун склоочисника",
+              "spareParts": [
+                {
+                  "id": 11721,
+                  "code": "wiper_motor",
+                  "name": "Двигун склоочисника",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1173,
+              "code": "washer_pump",
+              "name": "Насос омивача",
+              "spareParts": [
+                {
+                  "id": 11731,
+                  "code": "washer_pump",
+                  "name": "Насос омивача",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1174,
+              "code": "wiper_linkage",
+              "name": "Важіль склоочисника",
+              "spareParts": [
+                {
+                  "id": 11741,
+                  "code": "wiper_linkage",
+                  "name": "Важіль склоочисника",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1175,
+              "code": "wiper_drive_system",
+              "name": "Система тяг і важелів приводу склоочисника",
+              "spareParts": [
+                {
+                  "id": 11751,
+                  "code": "wiper_drive_system",
+                  "name": "Система тяг і важелів приводу склоочисника",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1176,
+              "code": "wiper_reservoir",
+              "name": "Бачок склоочисника",
+              "spareParts": [
+                {
+                  "id": 11761,
+                  "code": "wiper_reservoir",
+                  "name": "Бачок склоочисника",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 118,
+          "code": "additional_conveniences",
+          "name": "Додаткові зручності",
+          "nodes": [
+            {
+              "id": 1181,
+              "code": "window_lifter",
+              "name": "Підйомний пристрій для вікон",
+              "spareParts": [
+                {
+                  "id": 11811,
+                  "code": "window_lifter",
+                  "name": "Підйомний пристрій для вікон",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1182,
+              "code": "speed_control_system",
+              "name": "Система регулювання швидкості",
+              "spareParts": [
+                {
+                  "id": 11821,
+                  "code": "speed_control_system",
+                  "name": "Система регулювання швидкості",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1183,
+              "code": "additional_sensors",
+              "name": "Датчики",
+              "spareParts": [
+                {
+                  "id": 11831,
+                  "code": "additional_sensors",
+                  "name": "Датчики",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1184,
+              "code": "electrical_drives",
+              "name": "Реле, вимикачі, електроприводи",
+              "spareParts": [
+                {
+                  "id": 11841,
+                  "code": "window_regulator",
+                  "name": "Стеклопод'емник",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 11842,
+                  "code": "speed_control_system_dup",
+                  "name": "Система регулювання швидкості",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 11843,
+                  "code": "mirror",
+                  "name": "Дзеркало",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "code": "heating_ac",
+      "name": "Опалення / кондиціонер",
+      "nodes": [
+        {
+          "id": 121,
+          "code": "heating",
+          "name": "Опалення",
+          "spareParts": [
+            {
+              "id": 1211,
+              "code": "cabin_filter",
+              "name": "Фільтр салонний",
+              "tag": "one_side"
+            },
+            {
+              "id": 1212,
+              "code": "heat_exchanger",
+              "name": "Теплообмінник",
+              "tag": "one_side"
+            },
+            {
+              "id": 1213,
+              "code": "fan_motor",
+              "name": "Електродвигун вентилятора",
+              "tag": "one_side"
+            },
+            {
+              "id": 1214,
+              "code": "control_elements",
+              "name": "Елементи управління",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 122,
+          "code": "air_conditioner",
+          "name": "Кондиціонер",
+          "spareParts": [
+            {
+              "id": 1221,
+              "code": "ac_compressor",
+              "name": "Компресор",
+              "tag": "one_side"
+            },
+            {
+              "id": 1222,
+              "code": "ac_condenser",
+              "name": "Конденсатор",
+              "tag": "one_side"
+            },
+            {
+              "id": 1223,
+              "code": "ac_evaporator",
+              "name": "Випарник",
+              "tag": "one_side"
+            },
+            {
+              "id": 1224,
+              "code": "ac_drier",
+              "name": "Осушувач",
+              "tag": "one_side"
+            },
+            {
+              "id": 1225,
+              "code": "ac_valves",
+              "name": "Клапани",
+              "tag": "one_side"
+            },
+            {
+              "id": 1226,
+              "code": "ac_sensors",
+              "name": "Датчики",
+              "tag": "one_side"
+            },
+            {
+              "id": 1227,
+              "code": "ac_hoses",
+              "name": "Трубопровід системи кондиціонування",
+              "tag": "one_side"
+            },
+            {
+              "id": 1228,
+              "code": "ac_control",
+              "name": "Управління, регулювання",
+              "tag": "one_side"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "code": "interior_details",
+      "name": "Деталі салону",
+      "spareParts": [
+        {
+          "id": 131,
+          "code": "window_lifter",
+          "name": "Підйомний пристрій для вікон",
+          "tag": "one_side"
+        },
+        {
+          "id": 132,
+          "code": "handles",
+          "name": "Ручки",
+          "tag": "one_side"
+        },
+        {
+          "id": 133,
+          "code": "control_units",
+          "name": "Органи керування автомобілем",
+          "tag": "one_side"
+        },
+        {
+          "id": 134,
+          "code": "trunk",
+          "name": "Багажник",
+          "tag": "one_side"
+        },
+        {
+          "id": 135,
+          "code": "lock",
+          "name": "Замок",
+          "nodes": [
+            {
+              "id": 1351,
+              "code": "external_lock",
+              "name": "Зовнішній замок",
+              "spareParts": [
+                {
+                  "id": 13511,
+                  "code": "external_lock",
+                  "name": "Зовнішній замок",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1352,
+              "code": "lock_handles",
+              "name": "Ручки",
+              "spareParts": [
+                {
+                  "id": 13521,
+                  "code": "lock_handles",
+                  "name": "Ручки",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "code": "body_details",
+      "name": "Деталі кузова",
+      "nodes": [
+        {
+          "id": 141,
+          "code": "gas_springs",
+          "name": "Газові пружини",
+          "spareParts": [
+            {
+              "id": 1411,
+              "code": "trunk_gas_struts",
+              "name": "Газові упори кришки багажника в зборі",
+              "tag": "one_side"
+            }
+          ]
+        },
+        {
+          "id": 142,
+          "code": "front_part",
+          "name": "Автомобіль, передня частина",
+          "spareParts": [
+            {
+              "id": 1421,
+              "code": "bumper",
+              "name": "Бампер",
+              "tag": "one_side"
+            },
+            {
+              "id": 1422,
+              "code": "fender",
+              "name": "Крило, навісні частини",
+              "tag": "one_side"
+            },
+            {
+              "id": 1423,
+              "code": "wheel_arch",
+              "name": "Колісна ніша",
+              "tag": "one_side"
+            },
+            {
+              "id": 1424,
+              "code": "hood",
+              "name": "Капот",
+              "tag": "one_side"
+            },
+            {
+              "id": 1425,
+              "code": "engine_casing",
+              "name": "Кожух двигуна",
+              "tag": "one_side"
+            },
+            {
+              "id": 1426,
+              "code": "windshield",
+              "name": "Переднє скло",
+              "tag": "one_side"
+            },
+            {
+              "id": 1427,
+              "code": "headlight",
+              "name": "Головне світло",
+              "tag": "one_side"
+            },
+            {
+              "id": 1428,
+              "code": "headlamp",
+              "name": "Фара",
+              "tag": "one_side"
+            },
+            {
+              "id": 1429,
+              "code": "mounting_details",
+              "name": "Деталі кріплення",
+              "spareParts": [
+                {
+                  "id": 14291,
+                  "code": "cover",
+                  "name": "Покриття, кришки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14292,
+                  "code": "mounting",
+                  "name": "Кріплення",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14293,
+                  "code": "emblems",
+                  "name": "Емблеми",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14294,
+                  "code": "radiator_grill",
+                  "name": "Решітка радіатора",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14295,
+                  "code": "protective_clips",
+                  "name": "Облицювання, захисні накладки",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 143,
+          "code": "passenger_cabin",
+          "name": "Кабіна пасажира",
+          "spareParts": [
+            {
+              "id": 1431,
+              "code": "door_sills",
+              "name": "Накладки порога",
+              "tag": "one_side"
+            },
+            {
+              "id": 1432,
+              "code": "doors",
+              "name": "Двері",
+              "tag": "one_side"
+            },
+            {
+              "id": 1433,
+              "code": "side_glass",
+              "name": "Дверні, бічні стекла",
+              "tag": "one_side"
+            },
+            {
+              "id": 1434,
+              "code": "mirrors",
+              "name": "Дзеркала",
+              "tag": "one_side"
+            },
+            {
+              "id": 1435,
+              "code": "mounting_details",
+              "name": "Деталі кріплення",
+              "spareParts": [
+                {
+                  "id": 14351,
+                  "code": "protective_clips",
+                  "name": "Облицювання, захисні накладки",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 144,
+          "code": "rear_part",
+          "name": "Автомобіль, задня частина",
+          "spareParts": [
+            {
+              "id": 1441,
+              "code": "bumper",
+              "name": "Бампер",
+              "tag": "one_side"
+            },
+            {
+              "id": 1442,
+              "code": "fender",
+              "name": "Крило, навісні частини",
+              "tag": "one_side"
+            },
+            {
+              "id": 1443,
+              "code": "trunk_lid",
+              "name": "Кришка багажника",
+              "tag": "one_side"
+            },
+            {
+              "id": 1444,
+              "code": "rear_window",
+              "name": "Заднє вікно",
+              "tag": "one_side"
+            },
+            {
+              "id": 1445,
+              "code": "wheel_arch",
+              "name": "Колісна ніша",
+              "tag": "one_side"
+            },
+            {
+              "id": 1446,
+              "code": "fuel_tank",
+              "name": "Бак паливний",
+              "tag": "one_side"
+            },
+            {
+              "id": 1447,
+              "code": "rear_light",
+              "name": "Задній ліхтар",
+              "tag": "one_side"
+            },
+            {
+              "id": 1448,
+              "code": "additional_stop_signal",
+              "name": "Додатковий стоп-сигнал",
+              "tag": "one_side"
+            },
+            {
+              "id": 1449,
+              "code": "rear_fog_light",
+              "name": "Задня протитуманна фара",
+              "tag": "one_side"
+            },
+            {
+              "id": 1450,
+              "code": "mounting_details",
+              "name": "Деталі кріплення",
+              "spareParts": [
+                {
+                  "id": 14501,
+                  "code": "cover",
+                  "name": "Покриття, кришки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14502,
+                  "code": "protective_clips",
+                  "name": "Облицювання, захисні накладки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14503,
+                  "code": "gas_springs",
+                  "name": "Газові пружини",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "code": "body_components",
+          "name": "Кузовні деталі",
+          "spareParts": [
+            {
+              "id": 1451,
+              "code": "bumper",
+              "name": "Бампер",
+              "tag": "one_side"
+            },
+            {
+              "id": 1452,
+              "code": "door_sills",
+              "name": "Накладки порога",
+              "tag": "one_side"
+            },
+            {
+              "id": 1453,
+              "code": "fender",
+              "name": "Крило, навісні частини",
+              "tag": "one_side"
+            },
+            {
+              "id": 1454,
+              "code": "front_grill",
+              "name": "Ґрати й накладки передньої частини автомобіля",
+              "tag": "one_side"
+            },
+            {
+              "id": 1455,
+              "code": "wheel_arch",
+              "name": "Колісна ніша",
+              "tag": "one_side"
+            },
+            {
+              "id": 1456,
+              "code": "cover",
+              "name": "Покриття, кришки",
+              "tag": "one_side"
+            },
+            {
+              "id": 1457,
+              "code": "doors",
+              "name": "Двері",
+              "tag": "one_side"
+            },
+            {
+              "id": 1458,
+              "code": "trunk_lid",
+              "name": "Кришка багажника",
+              "tag": "one_side"
+            },
+            {
+              "id": 1459,
+              "code": "hood",
+              "name": "Капот",
+              "tag": "one_side"
+            },
+            {
+              "id": 1460,
+              "code": "body_mounting_details",
+              "name": "Облицювання, захисні накладки, емблеми",
+              "spareParts": [
+                {
+                  "id": 14601,
+                  "code": "cover",
+                  "name": "Облицювання, захисні накладки",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14602,
+                  "code": "emblems",
+                  "name": "Емблеми",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 147,
+          "code": "glazing_and_mirrors",
+          "name": "Скління, дзеркала",
+          "nodes": [
+            {
+              "id": 1471,
+              "code": "glazing",
+              "name": "Скління",
+              "spareParts": [
+                {
+                  "id": 14711,
+                  "code": "windows",
+                  "name": "Шибки",
+                  "spareParts": [
+                    {
+                      "id": 147111,
+                      "code": "rear_window",
+                      "name": "Заднє скло",
+                      "tag": "one_side"
+                    },
+                    {
+                      "id": 147112,
+                      "code": "windshield",
+                      "name": "Переднє скло",
+                      "tag": "one_side"
+                    },
+                    {
+                      "id": 147113,
+                      "code": "side_glass",
+                      "name": "Дверні, бічні стекла",
+                      "tag": "one_side"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1472,
+              "code": "mirrors",
+              "name": "Дзеркала",
+              "spareParts": [
+                {
+                  "id": 14721,
+                  "code": "rear_view_mirror",
+                  "name": "Зовнішнє дзеркало заднього виду, вузол",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14722,
+                  "code": "mirror_glass",
+                  "name": "Дзеркальне скло",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 148,
+          "code": "lighting_body",
+          "name": "Освітлення",
+          "nodes": [
+            {
+              "id": 1481,
+              "code": "mounting",
+              "name": "Кріплення",
+              "spareParts": [
+                {
+                  "id": 14811,
+                  "code": "mounting",
+                  "name": "Кріплення",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1482,
+              "code": "tail_lights",
+              "name": "Tail Lights/ parts",
+              "spareParts": [
+                {
+                  "id": 14821,
+                  "code": "additional_stop_signal",
+                  "name": "Додатковий стоп-сигнал",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14822,
+                  "code": "rear_fog_light",
+                  "name": "Задня протитуманна фара",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14823,
+                  "code": "reverse_light",
+                  "name": "Фара заднього ходу",
+                  "tag": "one_side"
+                },
+                {
+                  "id": 14824,
+                  "code": "rear_light",
+                  "name": "Задній ліхтар",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1483,
+              "code": "headlights_body",
+              "name": "Головне світло",
+              "spareParts": [
+                {
+                  "id": 14831,
+                  "code": "headlight",
+                  "name": "Головне світло",
+                  "tag": "one_side"
+                }
+              ]
+            },
+            {
+              "id": 1484,
+              "code": "additional_headlights",
+              "name": "Додаткове освітлення",
+              "spareParts": [
+                {
+                  "id": 14841,
+                  "code": "additional_headlight",
+                  "name": "Фара",
+                  "tag": "one_side"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

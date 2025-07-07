@@ -1,0 +1,105 @@
+.wrapper {
+  /* position: absolute;
+  bottom: 12px;
+  left: 6px;
+  right: 6px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 75px; */
+  width: 100%;
+  max-width: 378px;
+  padding-right: 23px;
+  padding-left: 23px;
+  padding-top: 4px;
+
+  border-top: 1px dashed var(--main-gray);
+
+  /* place-items: center; */
+
+  /* margin-bottom: auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapperSaved {
+  justify-content: center;
+}
+
+.cancel,
+.confirm,
+.home {
+  width: 41px;
+  height: 41px;
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: var(--bg-secondary);
+
+  border: none;
+}
+
+.cancel {
+  background-color: var(--red);
+}
+
+.confirm {
+  background-color: var(--green);
+}
+
+.confirmDisabled {
+  background-color: var(--main-gray);
+  cursor: default;
+}
+
+.home {
+  background-color: var(--input-text);
+}
+
+.money {
+  color: var(--status-new);
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.greyCircle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  flex-shrink: 0;
+
+  border-radius: 34px;
+  background: var(--input-text);
+  cursor: pointer;
+}
+
+.greenCircle {
+  background-color: var(--green);
+}
+
+.greyCircle .icon,
+.home .icon {
+  fill: var(--light-gray);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--bg-secondary);
+}
+
+.savedScreen {
+  display: none;
+}

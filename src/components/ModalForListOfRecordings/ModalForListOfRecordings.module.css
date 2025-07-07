@@ -1,0 +1,50 @@
+.wrapper {
+  background-color: var(--bg-secondary);
+  padding: 10px;
+  border-radius: 8px;
+
+  height: 400px;
+}
+
+.list {
+  height: 300px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+  /* width: clamp(5px, min(0.432vw, 0.741vh), 8px); */
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: var(--bg);
+}
+
+.list::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: var(--main-gray);
+}
+
+.btnBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cross {
+  fill: var(--bg-secondary);
+}
+
+.cancelBtn {
+  max-width: 60px;
+  max-height: 60px;
+  width: 8.706vh;
+  height: 8.706vh;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--red);
+  /* margin-right: auto;
+    margin-left: auto; */
+}
