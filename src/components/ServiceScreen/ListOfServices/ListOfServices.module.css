@@ -1,0 +1,65 @@
+.list {
+  display: flex;
+  align-items: start;
+  gap: 18px;
+  margin-bottom: 16px;
+  width: 330px;
+  overflow-x: auto;
+  padding-left: 5px;
+  padding-bottom: 8px;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.listItem {
+  display: flex;
+  width: 155px;
+  padding: 10px;
+  /* align-items: center; */
+  gap: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  background-color: #2e393f;
+  border: 1px solid #2e393f;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.listItemActive {
+  border: 1px solid rgba(255, 255, 255, 0.52);
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  aspect-ratio: 1/1;
+}
+
+.done {
+  fill: var(--white);
+}
+
+.future {
+  fill: var(--text-gray);
+}
+
+.text,
+.mileage {
+  color: var(--Labels-Primary---Dark, #fff);
+  text-align: center;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: 22px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speedIcon {
+  width: 16px;
+  height: 16px;
+}

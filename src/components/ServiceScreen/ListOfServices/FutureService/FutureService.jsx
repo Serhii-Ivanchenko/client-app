@@ -2,17 +2,18 @@ import { BsCheckLg } from 'react-icons/bs';
 import { BsCreditCard } from 'react-icons/bs';
 import { BsReceipt } from 'react-icons/bs';
 import CreateARecord from './CreateARecord/CreateARecord';
+import css from './FutureService.module.css';
 
 export default function FutureService({ item }) {
   return (
     <div>
-      <div>
-        <p>Потрібно:</p>
-        <ul>
+      <div className={css.worksBox}>
+        <p className={css.title}>Потрібно:</p>
+        <ul className={css.workList}>
           {item.works.map((work, index) => (
-            <li key={index}>
+            <li key={index} className={css.listItem}>
               <BsCheckLg />
-              <p>{work}</p>
+              <p className={css.workName}>{work}</p>
             </li>
           ))}
         </ul>

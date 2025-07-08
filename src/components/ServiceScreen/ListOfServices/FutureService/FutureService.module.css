@@ -1,0 +1,34 @@
+.worksBox {
+  display: flex;
+  width: 329px;
+  padding: 10px 12px;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 8px;
+
+  border-radius: 6px;
+  background-color: var(--bg-secondary);
+
+  margin-bottom: 18px;
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title,
+.workName {
+  color: var(--white);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
