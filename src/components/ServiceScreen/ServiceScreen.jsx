@@ -71,9 +71,9 @@ export default function ServiceScreen(params) {
   return (
     <div className={css.wrapper}>
       <div>
-        <div>
-          <IoCarSport />
-          <p>Audi A6</p>
+        <div className={css.carNameBox}>
+          <IoCarSport className={css.carIcon} />
+          <p className={css.carName}>Audi A6</p>
         </div>
         <div>
           <SlSpeedometer />
@@ -81,6 +81,7 @@ export default function ServiceScreen(params) {
           <BsFillCameraFill />
         </div>
       </div>
+
       <ListOfServices services={services} />
     </div>
   );
