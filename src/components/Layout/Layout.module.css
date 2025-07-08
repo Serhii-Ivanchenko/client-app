@@ -10,7 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  background: var(--bg-secondary);
+  background: var(--bg-input);
   /* overscroll-behavior: none;
   touch-action: none; */
 }
