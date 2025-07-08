@@ -19,15 +19,15 @@ export default function FutureService({ item }) {
         </ul>
       </div>
 
-      <div>
-        <button>
-          <BsCreditCard />
-          <p>Розрахувати</p>
+      <div className={css.sumInfoBox}>
+        <button className={css.btnCount}>
+          <BsCreditCard className={css.cardIcon} />
+          <p className={css.text}>Розрахувати</p>
         </button>
 
-        <div>
-          <BsReceipt />
-          <p> --- грн</p>
+        <div className={css.sumBox}>
+          <BsReceipt className={css.receiptIcon} />
+          <p className={css.sum}> --- грн</p>
         </div>
       </div>
 
