@@ -1,8 +1,9 @@
 .wrapper {
   width: 390px;
   height: 100vh;
-  padding-right: 31px;
-  padding-left: 31px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 14px;
   background-color: #2d3038;
 }
 

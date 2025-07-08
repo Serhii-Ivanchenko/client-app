@@ -125,3 +125,15 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+
+.categoryTitle {
+  color: var(--white);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: small-caps;
+
+  margin-bottom: 8px;
+}

@@ -6,8 +6,21 @@ import css from './ServiceInfoDone.module.css';
 export default function ServiceInfoDone({ item }) {
   return (
     <div className={css.wrapper}>
+      <div className={css.categoryTitle}>Діагностика</div>
       <div className={css.doneBox}>
-        <p className={css.title}>Виконано:</p>
+        <p className={css.title}>Запчастини:</p>
+        <ul className={css.workList}>
+          {item.works.map((work, index) => (
+            <li key={index} className={css.listItem}>
+              <BsCheckLg className={css.checkIcon} />
+              <p className={css.workName}>{work}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={css.categoryTitle}>Ремонт</div>
+      <div className={css.doneBox}>
+        <p className={css.title}>Замінено:</p>
         <ul className={css.workList}>
           {item.works.map((work, index) => (
             <li key={index} className={css.listItem}>

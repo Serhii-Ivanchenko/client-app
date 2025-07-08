@@ -19,7 +19,7 @@ export default function FutureService({ item }) {
         </ul>
       </div>
 
-      <div className={css.sumInfoBox}>
+      {/* <div className={css.sumInfoBox}>
         <button className={css.btnCount}>
           <BsCreditCard className={css.cardIcon} />
           <p className={css.text}>Розрахувати</p>
@@ -29,7 +29,7 @@ export default function FutureService({ item }) {
           <BsReceipt className={css.receiptIcon} />
           <p className={css.sum}> --- грн</p>
         </div>
-      </div>
+      </div> */}
 
       <CreateARecord />
     </div>
