@@ -4,7 +4,7 @@
   padding: 10px 12px;
   flex-direction: column;
   /* align-items: center; */
-  gap: 8px;
+  gap: 5px;
 
   border-radius: 6px;
   background-color: var(--bg-secondary);
@@ -15,13 +15,18 @@
 .workList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  /* gap: 8px; */
 }
 
 .listItem {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  /* align-items: center; */
+  gap: 5px;
+}
+
+.checkIcon {
+  width: 19px;
+  height: 19px;
 }
 
 .title,
@@ -96,7 +101,6 @@
 
 .text {
   color: var(--light-gray);
-  font-variant-numeric: lining-nums proportional-nums;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

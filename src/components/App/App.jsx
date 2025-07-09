@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import RestrictedRoute from '../RestrictedRoute.jsx';
 import PrivateRoute from '../PrivateRoute.jsx';
 import { Toaster } from 'react-hot-toast';
+import Header from '../Header/Header.jsx';
 
 const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage.jsx'));
 const GaragePage = lazy(() => import('../../pages/GaragePage/GaragePage.jsx'));
@@ -48,11 +49,8 @@ export default function App() {
         <LoaderSvg />
       ) : ( */}
       <Suspense fallback={<LoaderSvg />}>
-        {/* {location.pathname !== '/login' &&
-            location.pathname !== '/' &&
-            !isLoading &&
-            !isRefreshing && <TopPart />} */}
         <Toaster />
+        <Header/>
         <Routes>
           {/* <Route
             path="/"
@@ -73,7 +71,7 @@ export default function App() {
             element={<GaragePage />}
           />
           <Route
-            path="/service/:carId"
+            path="/service"
             // element={
             //   <PrivateRoute redirectTo="/login" component={<ServicePage />} />
             // }

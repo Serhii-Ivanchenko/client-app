@@ -45,6 +45,8 @@
 }
 
 .selectIcon {
+  width: 13px;
+  height: 13px;
   fill: var(--icon-gray);
   transition: transform 0.3s ease-in-out;
 }
@@ -60,7 +62,7 @@
 .options {
   position: absolute;
   width: 100%;
-  top: 56px;
+  /* top: 56px; */
   left: 0;
   margin-top: 4px;
   background-color: #313540;
@@ -143,7 +145,7 @@
 
 .arrowBox {
   display: flex;
-  padding: 0 6px;
+  padding: 2px 6px;
   align-items: flex-end;
   gap: 7px;
 
