@@ -18,6 +18,12 @@ export default function CreateARecord() {
   const [startDate, setStartDate] = useState(new Date());
   const [chosenCity, setChosenCity] = useState('');
   const [chosenService, setChosenService] = useState('');
+  const [newValue, setNewValue] = useState('');
+
+  const handleChange = e => {
+    setNewValue(e.target.value);
+  };
+
   const CustomInput = forwardRef(({ value, onClick }, ref) => (
     <div className={css.datePickerWrapper}>
       <button
@@ -144,6 +150,13 @@ export default function CreateARecord() {
           })}
         </div>
       </div>
+
+      <textarea
+        className={css.textarea}
+        value={newValue}
+        onChange={e => handleChange(e)}
+        placeholder="Залиште Ваш коментар"
+      />
 
       <button className={css.recordBtn}>
         <BsCalendarWeek className={css.calendar} />

@@ -89,7 +89,7 @@
 /* Time Selector */
 
 .timeBtn {
-  width: 79px;
+  /* width: 79px; */
   height: 46px;
   border-radius: 6px;
   display: flex;
@@ -140,8 +140,8 @@
 .timeWrapper {
   width: 100%;
   /* height: clamp(86px, min(11.944vh, 15.568vw / 2.233), 129px); */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 13px;
   row-gap: 6px;
   column-gap: 4px;
@@ -177,4 +177,18 @@
   font-weight: 400;
   line-height: normal;
   font-variant: small-caps;
+}
+
+.textarea {
+  background-color: #313540;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 6px;
+  resize: none;
+  height: 100px;
+  outline: none;
+  padding: 15px;
+
+  color: var(--light-gray);
+  font-size: 14px;
 }
