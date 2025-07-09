@@ -1,0 +1,44 @@
+.footerWrapper {
+    height: 83px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    background-blend-mode: hard-light;
+    box-shadow: 0px -0.33px 0px 0px rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.navLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--light-gray);
+    cursor: pointer;
+}
+
+.active {
+    color: #0A84FF
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.text {
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2em;
+}
