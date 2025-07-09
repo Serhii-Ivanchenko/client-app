@@ -1,6 +1,6 @@
 .wrapper {
   max-width: 390px;
-  height: calc(100vh - 141px);
+  height: calc(100dvh - 140px);
   padding: 14px 30px;
   background-color: #2d3038;
   margin-left: auto;
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 15px; */
+  gap: 10px;
 
   max-width: 212px;
   height: 40px;

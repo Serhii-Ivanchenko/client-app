@@ -10,14 +10,9 @@ const services = [
   {
     id: 1,
     mileage: '259',
-    works: [
-      'Ремень поликлиновый',
-      'Насос системы охлаждения',
-      'Термостат',
-      'Колодки гальмівні',
-    ],
+    works: ['Ремень поликлиновый', 'Насос системы охлаждения', 'Термостат'],
     status: 'done',
-    sum: '5 200',
+    sum: '5 500',
     photos: [car, car, car],
   },
   {
@@ -79,6 +74,8 @@ export default function ServiceScreen(params) {
   const [newValue, setNewValue] = useState('257 000');
   const inputRef = useRef();
 
+  const filteredServices = services.sort((a, b) => b.mileage - a.mileage);
+
   const handleChange = e => {
     setNewValue(e.target.value);
   };
@@ -119,7 +116,7 @@ export default function ServiceScreen(params) {
         </div>
       </div>
 
-      <ListOfServices services={services} />
+      <ListOfServices services={filteredServices} />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 export default function ListOfServices({ services }) {
-  const [activeService, setActiveService] = useState(1);
+  const [activeService, setActiveService] = useState(services[0]?.id);
   const activeServiceContent = services.find(item => item.id === activeService);
   const serviceIds = services.map(service => service.id);
   const currentIndex = serviceIds.indexOf(activeService);
