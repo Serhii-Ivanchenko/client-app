@@ -1,5 +1,10 @@
+import GaragePageCentralComponent from '../../components/GaragePageCentralComponent/GaragePageCentralComponent';
 import css from './GaragePage.module.css';
 
 export default function GaragePage() {
-  return <div>GaragePage</div>;
+  return (
+    <div>
+      <GaragePageCentralComponent />
+    </div>
+  );
 }
