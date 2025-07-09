@@ -6,13 +6,13 @@ import css from './FutureService.module.css';
 
 export default function FutureService({ item }) {
   return (
-    <div>
+    <>
       <div className={css.worksBox}>
         <p className={css.title}>Потрібно:</p>
         <ul className={css.workList}>
           {item.works.map((work, index) => (
             <li key={index} className={css.listItem}>
-              <BsCheckLg />
+              <BsCheckLg className={css.checkIcon}/>
               <p className={css.workName}>{work}</p>
             </li>
           ))}
@@ -32,6 +32,6 @@ export default function FutureService({ item }) {
       </div> */}
 
       <CreateARecord />
-    </div>
+    </>
   );
 }

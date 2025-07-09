@@ -71,7 +71,7 @@ export default function App() {
             element={<GaragePage />}
           />
           <Route
-            path="/service/:carId"
+            path="/service"
             // element={
             //   <PrivateRoute redirectTo="/login" component={<ServicePage />} />
             // }
