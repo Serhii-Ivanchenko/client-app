@@ -1,0 +1,159 @@
+.selectWrapper {
+  position: relative;
+}
+
+.inputSelect {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 10px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  border: none;
+  background: #313540;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  color: var(--light-gray);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: small-caps;
+
+  appearance: none;
+  outline: none;
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.inputSelectDisabled {
+  cursor: default;
+}
+
+.selectedValue {
+  /* width: 140px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selectedValueDisabled {
+  color: var(--dark-grey-bg);
+}
+
+.selectIcon {
+  width: 13px;
+  height: 13px;
+  fill: var(--icon-gray);
+  transition: transform 0.3s ease-in-out;
+}
+
+.selectIconDisabled {
+  fill: var(--dark-grey-bg);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  /* top: 56px; */
+  left: 0;
+  margin-top: 4px;
+  background-color: #313540;
+  box-shadow: -1px 3px 18px 7px rgba(0, 0, 0, 0.25);
+
+  border-radius: 12px;
+  /* border: solid 1px var(--input-stroke); */
+
+  z-index: 999;
+
+  height: fit-content;
+  max-height: 235px;
+  overflow: auto;
+}
+
+.options::-webkit-scrollbar {
+  /* width: 6px; */
+  width: clamp(4px, min(0.556vh, 0.324vw), 6px);
+}
+
+.options::-webkit-scrollbar-track {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: var(--bg-secondary);
+}
+
+.options::-webkit-scrollbar-thumb {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: var(--main-gray);
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+
+  font-size: 16px;
+
+  color: var(--light-gray);
+}
+
+.option:hover {
+  background-color: var(--main-gray);
+}
+
+.option:not(:last-child) {
+  border-bottom: solid 1px var(--input-stroke);
+}
+
+.label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconPlus {
+  width: 20px;
+  height: 20px;
+}
+
+.optionPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-input);
+  border-radius: 3px;
+  background-color: #ebffe1;
+  padding: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.arrowBox {
+  display: flex;
+  padding: 2px 6px;
+  align-items: flex-end;
+  gap: 7px;
+
+  position: absolute;
+  top: 24%;
+  right: 17.5px;
+
+  border-radius: 6px;
+  background: var(--CRM-modal-InputBG, #2d3038);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

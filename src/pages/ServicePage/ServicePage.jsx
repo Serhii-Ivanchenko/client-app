@@ -1,5 +1,10 @@
+import ServiceScreen from '../../components/ServiceScreen/ServiceScreen';
 import css from './ServicePage.module.css';
 
 export default function ServicePage() {
-    return <div>ServicePage</div>;
-};
+  return (
+    <div>
+      <ServiceScreen />
+    </div>
+  );
+}
