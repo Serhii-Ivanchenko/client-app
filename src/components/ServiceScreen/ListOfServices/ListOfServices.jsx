@@ -4,11 +4,30 @@ import ServiceInfoDone from './ServiceInfoDone/ServiceInfoDone';
 import FutureService from './FutureService/FutureService';
 import css from './ListOfServices.module.css';
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 export default function ListOfServices({ services }) {
   const [activeService, setActiveService] = useState(1);
 
   const activeServiceContent = services.find(item => item.id === activeService);
+
+  const serviceIds = services.map(service => service.id);
+  const currentIndex = serviceIds.indexOf(activeService);
+  console.log('currentIndex', currentIndex);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      const next = serviceIds[currentIndex + 1];
+      if (next) setActiveService(next);
+    },
+    onSwipedRight: () => {
+      const prev = serviceIds[currentIndex - 1];
+      if (prev) setActiveService(prev);
+    },
+    trackTouch: true,
+    trackMouse: false,
+    preventScrollOnSwipe: true,
+  });
 
   return (
     <div className={css.listWrapper}>
@@ -33,11 +52,13 @@ export default function ListOfServices({ services }) {
         ))}
       </ul>
 
-      {activeServiceContent.status === 'done' ? (
-        <ServiceInfoDone item={activeServiceContent} />
-      ) : (
-        <FutureService item={activeServiceContent} />
-      )}
+      <div {...swipeHandlers}>
+        {activeServiceContent.status === 'done' ? (
+          <ServiceInfoDone item={activeServiceContent} />
+        ) : (
+          <FutureService item={activeServiceContent} />
+        )}
+      </div>
     </div>
   );
 }
