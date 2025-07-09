@@ -3,7 +3,7 @@
   align-items: start;
   gap: 18px;
   margin-bottom: 16px;
-  width: 330px;
+  max-width: 330px;
   overflow-x: auto;
   padding-left: 5px;
   padding-bottom: 8px;

@@ -4,6 +4,7 @@ import { SlSpeedometer } from 'react-icons/sl';
 import { BsFillCameraFill } from 'react-icons/bs';
 import ListOfServices from './ListOfServices/ListOfServices';
 import car from '../../assets/images/autoPhoto.webp';
+import { useEffect, useRef, useState } from 'react';
 
 const services = [
   {
@@ -74,6 +75,20 @@ const services = [
 ];
 
 export default function ServiceScreen(params) {
+  const [activeInput, setActiveInput] = useState(false);
+  const [newValue, setNewValue] = useState('257 000');
+  const inputRef = useRef();
+
+  const handleChange = e => {
+    setNewValue(e.target.value);
+  };
+
+  useEffect(() => {
+    if (inputRef && inputRef.current) {
+      inputRef.current.focus();
+    }
+  });
+
   return (
     <div className={css.wrapper}>
       <div className={css.topPartWrapper}>
@@ -83,9 +98,22 @@ export default function ServiceScreen(params) {
         </div>
         <div className={css.mileageBox}>
           <SlSpeedometer className={css.mileageIcon} />
-          <p className={css.mileage}>
-            {' '}
-            <span className={css.mileageNum}>257</span> тис. км
+          <p
+            className={css.mileage}
+            onClick={() => setActiveInput(true)}
+            onBlur={() => setActiveInput(false)}
+          >
+            {activeInput ? (
+              <input
+                className={css.mileageNumActive}
+                value={newValue}
+                onChange={e => handleChange(e)}
+                ref={inputRef}
+              />
+            ) : (
+              <span className={css.mileageNum}>{newValue}</span>
+            )}{' '}
+            км
           </p>
           <BsFillCameraFill className={css.camera} />
         </div>

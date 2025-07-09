@@ -6,7 +6,8 @@
 
 .doneBox {
   display: flex;
-  width: 329px;
+  /* max-width: 329px; */
+  width: 100%;
   padding: 10px 12px;
   flex-direction: column;
   /* align-items: center; */
