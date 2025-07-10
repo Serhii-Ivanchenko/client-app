@@ -1,0 +1,339 @@
+/* .wrapper {
+  position: relative;
+  max-width: 390px;
+  height: 905px;
+  overflow: hidden;
+} */
+
+.wrapper {
+  /* position: relative; */
+  max-width: 390px;
+  height: calc(100dvh - 140px);
+  padding: 14px clamp(5px, calc((100vw - 320px) * 0.357), 30px);
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+}
+
+.container {
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* padding: 9px; */
+}
+
+.iconCar {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: var(--light-gray);
+}
+
+.carModel {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.firstContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px
+}
+
+.secondContainer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: fit-content;
+  height: 42px;
+  margin-top: 23px;
+  padding: 10px;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  background: #2e393f;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: 22px; */
+}
+
+.millageInfo {
+  display: flex;
+  gap: 8px;
+  min-width: 160px;
+  height: 40px;
+  padding: 0px 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(67, 164, 141, 0.08);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.speedIcon {
+  fill: #99a443;
+  width: 18px;
+  height: 16.5px;
+}
+
+.millageText {
+  color: #99a443;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.TOText {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.speedIconSecond {
+  width: 18px;
+  height: 16.5px;
+}
+
+.millage {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.thirdContainer {
+  margin-top: 16px;
+  display: flex;
+  max-width: 329px;
+  padding: 10px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 6px;
+  /* background: var(--bg-secondary); */
+  background: #161617;
+}
+
+.list {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.doneList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doneItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doneItem span {
+  font-weight: 400;
+  /* спробувала додати бо жироно 600 */
+}
+
+.doneItem input[type='checkbox'] {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.doneItem input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.fourContainer {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.totalSum {
+  display: inline-flex;
+  height: 38px;
+  padding: 6px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: rgba(75, 164, 67, 0.08);
+}
+
+.receiptIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: #f5dd23;
+}
+
+.invoices {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--main-gray);
+  padding: 6px 14px;
+  border-radius: 6px;
+
+}
+
+.fiveContainer {
+  margin-top: 25px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.photoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.photoItem {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.photo {
+  display: block;
+  width: 96px;
+  height: 77px;
+  object-fit: cover;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.acceptBtn,
+.rejectBtn {
+  display: flex;
+  gap: 4px;
+  width: 150px;
+  height: 42px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #e5d527;
+  outline: none;
+  border: none;
+}
+
+.rejectBtn {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--light-gray);
+}
+
+/* Кнопка чату */
+.chatToggleBtn {
+  position: absolute;
+  /* bottom: 16px; */
+  bottom: 100px;
+  right: 16px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--main-gray);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.chatToggleBtn:hover {
+  background-color: var(--dark-gray);
+}
+
+.chatBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: #1c1c1e;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(105%);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+/* Коли чат відкритий */
+.chatOpen {
+  transform: translateY(0%);
+}
+
+.chatContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  z-index: 10;
+}
+
+
+.chatCloseBtn {
+  position: absolute;
+  top: -20px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--light-gray);
+  cursor: pointer;
+}
