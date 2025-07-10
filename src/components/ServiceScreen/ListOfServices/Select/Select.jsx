@@ -87,7 +87,11 @@ export default function Select({
           {array?.map(option => (
             <div
               key={option?.value}
-              className={css.option}
+              className={`${css.option} ${
+                chosenValue
+                  ? chosenValue === option.value && css.activeOption
+                  : defaultValue === option.value && css.activeOption
+              }`}
               onClick={() => handleOptionClick(option)}
             >
               {option?.label}

@@ -9,6 +9,10 @@ import { BsChevronRight } from 'react-icons/bs';
 import { format, addDays, subDays } from 'date-fns';
 import { useState, forwardRef } from 'react';
 import clsx from 'clsx';
+import './CalendarStyles.css';
+import { registerLocale } from 'react-datepicker';
+import uk from 'date-fns/locale/uk';
+registerLocale('uk', uk);
 
 // import { useSelector } from 'react-redux';
 // import { selectDate } from '../../../../redux/cars/selectors';
@@ -18,6 +22,12 @@ export default function CreateARecord() {
   const [startDate, setStartDate] = useState(new Date());
   const [chosenCity, setChosenCity] = useState('');
   const [chosenService, setChosenService] = useState('');
+  const [newValue, setNewValue] = useState('');
+
+  const handleChange = e => {
+    setNewValue(e.target.value);
+  };
+
   const CustomInput = forwardRef(({ value, onClick }, ref) => (
     <div className={css.datePickerWrapper}>
       <button
@@ -30,13 +40,8 @@ export default function CreateARecord() {
       >
         <BsChevronLeft className={css.btnIcon} />
       </button>
-      <div className={css.dateWrapper}>
-        <button
-          type="button"
-          className={css.customInput}
-          onClick={onClick}
-          ref={ref}
-        >
+      <div className={css.dateWrapper} ref={ref} onClick={onClick}>
+        <button type="button" className={css.customInput}>
           <BsCalendar2Week />
         </button>
         <p>{format(value, 'dd.MM.yyyy')}</p>
@@ -98,6 +103,7 @@ export default function CreateARecord() {
           onChange={date => setStartDate(date)}
           minDate={new Date()}
           customInput={<CustomInput />}
+          locale="uk"
         />
 
         <div className={css.timeWrapper}>
@@ -144,6 +150,13 @@ export default function CreateARecord() {
           })}
         </div>
       </div>
+
+      <textarea
+        className={css.textarea}
+        value={newValue}
+        onChange={e => handleChange(e)}
+        placeholder="Залиште Ваш коментар"
+      />
 
       <button className={css.recordBtn}>
         <BsCalendarWeek className={css.calendar} />

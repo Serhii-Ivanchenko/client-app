@@ -3,17 +3,17 @@ import { SlSpeedometer } from 'react-icons/sl';
 import ServiceInfoDone from './ServiceInfoDone/ServiceInfoDone';
 import FutureService from './FutureService/FutureService';
 import css from './ListOfServices.module.css';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 export default function ListOfServices({ services }) {
-  const [activeService, setActiveService] = useState(1);
-
+  const [activeService, setActiveService] = useState(services[0]?.id);
   const activeServiceContent = services.find(item => item.id === activeService);
-
   const serviceIds = services.map(service => service.id);
   const currentIndex = serviceIds.indexOf(activeService);
-  console.log('currentIndex', currentIndex);
+  const itemRefs = useRef([]);
+
+  // console.log('currentIndex', currentIndex);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
@@ -29,6 +29,17 @@ export default function ListOfServices({ services }) {
     preventScrollOnSwipe: true,
   });
 
+  useEffect(() => {
+    const index = services.findIndex(item => item.id === activeService);
+    if (itemRefs.current[index]) {
+      itemRefs.current[index].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+      });
+    }
+  }, [activeService, services]);
+
   return (
     <div className={css.listWrapper}>
       <ul className={css.list}>
@@ -39,6 +50,7 @@ export default function ListOfServices({ services }) {
               activeService === item.id && css.listItemActive
             }`}
             onClick={() => setActiveService(item.id)}
+            ref={el => (itemRefs.current[index] = el)}
           >
             <IoIosCheckmarkCircle
               className={`${css.checkIcon} ${
