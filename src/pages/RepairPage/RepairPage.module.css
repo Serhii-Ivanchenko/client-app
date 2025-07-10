@@ -1,8 +1,18 @@
-.wrapper {
+/* .wrapper {
   position: relative;
   max-width: 390px;
   height: 905px;
   overflow: hidden;
+} */
+
+.wrapper {
+  /* position: relative; */
+  max-width: 390px;
+  height: calc(100dvh - 140px);
+  padding: 14px clamp(5px, calc((100vw - 320px) * 0.357), 30px);
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
 }
 
 .container {
@@ -13,13 +23,15 @@
 
 .carInfo {
   display: flex;
-  gap: 10px;
-  padding: 9px;
+  align-items: center;
+  gap: 8px;
+  /* padding: 9px; */
 }
 
 .iconCar {
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
   fill: var(--light-gray);
 }
 
@@ -30,18 +42,19 @@
   line-height: 22px;
 }
 
-.bottomContainer {
-  padding: 14px 0;
-}
-.firstContainer,
-.secondContainer {
+.firstContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px
 }
 
 .secondContainer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
   width: fit-content;
+  height: 42px;
   margin-top: 23px;
   padding: 10px;
   gap: 8px;
@@ -49,15 +62,20 @@
   border: 1px solid rgba(255, 255, 255, 0.52);
   background: #2e393f;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: 22px; */
 }
 
 .millageInfo {
   display: flex;
-  gap: 13px;
-  /* width: 212px; */
+  gap: 8px;
+  min-width: 160px;
   height: 40px;
-  padding: 0px 14px;
+  padding: 0px 10px;
   align-items: center;
+  justify-content: center;
   border-radius: 6px;
   background: rgba(67, 164, 141, 0.08);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -72,7 +90,7 @@
 .millageText {
   color: #99a443;
   text-align: center;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   line-height: normal;
 }
@@ -118,6 +136,7 @@
 .doneList {
   display: flex;
   flex-direction: column;
+  gap: 6px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -127,11 +146,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 6px;
 }
 
 .doneItem span {
-  font-weight: 400; /* спробувала додати бо жироно 600 */
+  font-weight: 400;
+  /* спробувала додати бо жироно 600 */
 }
 
 .doneItem input[type='checkbox'] {
@@ -162,9 +181,9 @@
 
 .fourContainer {
   margin-top: 19px;
-  width: fit-content;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -189,8 +208,12 @@
 
 .invoices {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
+  border: 1px solid var(--main-gray);
+  padding: 6px 14px;
+  border-radius: 6px;
+
 }
 
 .fiveContainer {
@@ -256,12 +279,13 @@
 /* Кнопка чату */
 .chatToggleBtn {
   position: absolute;
-  bottom: 16px;
+  /* bottom: 16px; */
+  bottom: 100px;
   right: 16px;
   padding: 10px 14px;
   font-size: 16px;
   font-weight: 600;
-  background-color: #51844c;
+  background-color: var(--main-gray);
   color: var(--white);
   border: none;
   border-radius: 50px;
@@ -269,8 +293,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .chatToggleBtn:hover {
-  background-color: #678862;
+  background-color: var(--dark-gray);
 }
 
 .chatBox {
@@ -282,7 +307,7 @@
   background-color: #1c1c1e;
   border-radius: 12px 12px 0 0;
   box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.25);
-  transform: translateY(100%);
+  transform: translateY(105%);
   transition: transform 0.3s ease;
   z-index: 2;
 }
@@ -304,8 +329,8 @@
 
 .chatCloseBtn {
   position: absolute;
-  top: 8px;
-  right: 12px;
+  top: -20px;
+  right: 8px;
   background: none;
   border: none;
   font-size: 20px;

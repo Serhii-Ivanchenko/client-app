@@ -1,7 +1,7 @@
 .appContainer {
   display: flex;
   flex-direction: column;
-  max-width: 390px;
+  /* max-width: 390px; */
   width: 100vw;
   height: 100dvh;
   padding: 8px 0px 0px 0px;
