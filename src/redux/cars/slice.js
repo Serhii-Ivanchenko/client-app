@@ -54,6 +54,9 @@ const carsSlice = createSlice({
     clearRepair: state => {
       state.repairDetails = {};
     },
+    setChosenService: (state, action) => {
+      state.chosenService = action.payload;
+    },
   },
   extraReducers: builder =>
     builder
@@ -238,6 +241,7 @@ const carsSlice = createSlice({
 });
 export const {
   setChosenDate,
+  setChosenService,
   clearChosenDate,
   deleteCarInfo,
   deleteMileageOrVin,

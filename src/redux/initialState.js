@@ -16,6 +16,7 @@ export const initialState = {
     diagnostic: {},
     repairDetails: {},
     chosenDate: '',
+    chosenService:null,
     newCar: {},
     convertedMedia: [],
     mileageOrVin: {},

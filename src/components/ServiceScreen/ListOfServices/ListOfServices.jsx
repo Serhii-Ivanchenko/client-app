@@ -5,15 +5,34 @@ import FutureService from './FutureService/FutureService';
 import css from './ListOfServices.module.css';
 import { useEffect, useRef, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import { useDispatch, useSelector } from 'react-redux';
+import { setChosenService } from '../../../redux/cars/slice';
+import { selectChosenService } from '../../../redux/cars/selectors';
 
-export default function ListOfServices({ services }) {
-  const [activeService, setActiveService] = useState(services[0]?.id);
+export default function ListOfServices({
+  services,
+  setCameraOn,
+  setCameraMileageOn,
+  photos,
+  setPhotos,
+}) {
+  const chosenService = useSelector(selectChosenService);
+  const [activeService, setActiveService] = useState(
+    chosenService ? chosenService : services[0]?.id
+  );
   const activeServiceContent = services.find(item => item.id === activeService);
   const serviceIds = services.map(service => service.id);
   const currentIndex = serviceIds.indexOf(activeService);
   const itemRefs = useRef([]);
+  const dispatch = useDispatch();
+  console.log('activeService', activeService);
+  console.log('chosenService', chosenService);
 
   // console.log('currentIndex', currentIndex);
+
+  useEffect(() => {
+    dispatch(setChosenService(activeService));
+  }, [activeService]);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
@@ -66,7 +85,13 @@ export default function ListOfServices({ services }) {
 
       <div {...swipeHandlers}>
         {activeServiceContent.status === 'done' ? (
-          <ServiceInfoDone item={activeServiceContent} />
+          <ServiceInfoDone
+            item={activeServiceContent}
+            setCameraOn={setCameraOn}
+            setCameraMileageOn={setCameraMileageOn}
+            photos={photos}
+            setPhotos={setPhotos}
+          />
         ) : (
           <FutureService item={activeServiceContent} />
         )}

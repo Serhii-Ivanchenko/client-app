@@ -27,10 +27,20 @@ export default function CreateARecord() {
   const [pickedDate, setPickedDate] = useState(
     new Date(startDate).toLocaleDateString()
   );
+
+  // const setNewDate = date => {
+  //   setPickedDate(date);
+  // };
+
+  useEffect(() => {
+    setPickedDate(startDate.toLocaleDateString());
+  }, [startDate]);
+
   const [datesArray, setDatesArray] = useState([]);
   const [booking, setBooking] = useState([]);
 
-  console.log('chosenTime', chosenTime);
+  // console.log('chosenTime', chosenTime);
+  // console.log('pickedDate', pickedDate);
 
   const handleChange = e => {
     setNewValue(e.target.value);
@@ -79,7 +89,7 @@ export default function CreateARecord() {
     setDatesArray(datesArray);
     setBooking(dataForBooking);
   }, [setDatesArray, chosenTime, setBooking]);
-  console.log('chosenTime', chosenTime);
+  // console.log('chosenTime', chosenTime);
 
   const isChosenDate = chosenTime?.find(item => {
     return item.appointment_date === pickedDate;
@@ -112,8 +122,8 @@ export default function CreateARecord() {
     //   timeArray = recordById?.time_slots?.split(',');
     // }
 
-    console.log('datesArray', datesArray);
-    console.log('timeArray', timeArray);
+    // console.log('datesArray', datesArray);
+    // console.log('timeArray', timeArray);
 
     const grouped = {};
 
@@ -124,13 +134,13 @@ export default function CreateARecord() {
       }
       grouped[formattedDate].push(timeArray[idx]);
     });
-    console.log('grouped', grouped);
+    // console.log('grouped', grouped);
 
     const result = Object.entries(grouped).map(([date, times]) => ({
       appointment_date: date,
       times,
     }));
-    console.log('result', result);
+    // console.log('result', result);
 
     setChosenTime(prevValues => {
       return result ? result : prevValues;

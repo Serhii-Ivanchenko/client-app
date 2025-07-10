@@ -17,6 +17,8 @@ export const selectConvertedMedia = state => state.cars.convertedMedia;
 
 export const selectMileageOrVin = state => state.cars.mileageOrVin;
 
+export const selectChosenService = state => state.cars.chosenService
+
 // Loaders
 
 export const selectIsLoading = state => state.cars.isLoading;

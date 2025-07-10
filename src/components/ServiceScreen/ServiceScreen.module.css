@@ -47,7 +47,8 @@
   justify-content: space-between;
   gap: 10px;
 
-  max-width: 212px;
+  /* max-width: 212px; */
+  width: 100%;
   height: 40px;
   padding: 0px 14px;
   /* gap: 18px; */
@@ -78,7 +79,8 @@
   color: var(--main-gray);
   font-size: 20px;
   font-weight: 600;
-  max-width: 80px;
+  width: 100%;
+  text-align: center;
   background-color: transparent;
   border: none;
   outline: none;
@@ -86,6 +88,12 @@
   /* display: flex;
   align-items: center;
   justify-content: center; */
+}
+
+.mileageNumActive::placeholder {
+  color: var(--main-gray);
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .mileageNum {
