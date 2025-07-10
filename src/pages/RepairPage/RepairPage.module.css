@@ -1,7 +1,11 @@
-.container {
+.wrapper {
+  position: relative;
   max-width: 390px;
-  /* height: 905px; */
-  height: 100vh;
+  height: 905px;
+  overflow: hidden;
+}
+
+.container {
   padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
@@ -227,7 +231,8 @@
   margin-top: 16px;
 }
 
-.acceptBtn, .rejectBtn {
+.acceptBtn,
+.rejectBtn {
   display: flex;
   gap: 4px;
   width: 150px;
@@ -240,11 +245,70 @@
   background: #e5d527;
   outline: none;
   border: none;
-
 }
 
-.rejectBtn{
-    background: transparent;
-    border: 1px solid var(--white);
-    color: var(--light-gray);
+.rejectBtn {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--light-gray);
+}
+
+/* Кнопка чату */
+.chatToggleBtn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #51844c;
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.chatToggleBtn:hover {
+  background-color: #678862;
+}
+
+.chatBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: #1c1c1e;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+/* Коли чат відкритий */
+.chatOpen {
+  transform: translateY(0%);
+}
+
+.chatContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  z-index: 10;
+}
+
+
+.chatCloseBtn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--light-gray);
+  cursor: pointer;
 }
