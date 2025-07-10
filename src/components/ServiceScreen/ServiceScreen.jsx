@@ -74,7 +74,7 @@ export default function ServiceScreen(params) {
   const [newValue, setNewValue] = useState('257 000');
   const inputRef = useRef();
 
-  const filteredServices = services.sort((a, b) => b.mileage - a.mileage);
+  const filteredServices = services.sort((a, b) => a.mileage - b.mileage);
 
   const handleChange = e => {
     setNewValue(e.target.value);
@@ -112,6 +112,12 @@ export default function ServiceScreen(params) {
             )}{' '}
             км
           </p>
+          {/* <input
+            className={css.mileageNumActive}
+            value={newValue}
+            onChange={e => handleChange(e)}
+            ref={inputRef}
+          /> */}
           <BsFillCameraFill className={css.camera} />
         </div>
       </div>
