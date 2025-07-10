@@ -1,8 +1,7 @@
 .wrapper {
   max-width: 390px;
   height: calc(100dvh - 140px);
-  padding: 14px 30px;
-  background-color: #2d3038;
+  padding: 14px clamp(5px, calc((100vw - 320px) * 0.357), 30px);
   margin-left: auto;
   margin-right: auto;
   overflow-y: auto;
@@ -82,6 +81,7 @@
   align-items: center;
   justify-content: center; */
 }
+
 .mileageNum {
   color: var(--main-gray);
 }

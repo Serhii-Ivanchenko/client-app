@@ -1,10 +1,13 @@
 .pageWrapper {
-  padding: 30px 10px 30px 30px;
-  background-color: var(--bg-input);
-  width: 393px;
-  height: 794px;
+  max-width: 390px;
+  height: calc(100dvh - 140px);
+  padding: 14px clamp(5px, calc((100vw - 320px) * 0.357), 30px);
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
 }
 
+/* 
 .scrollContainer {
   overflow: hidden;
   overflow-y: auto;
@@ -26,21 +29,22 @@
   width: 8px;
   border-radius: 4px;
   background-color: var(--main-gray);
-}
+} */
 
 .header {
   color: var(--white);
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 91.667% */
+  line-height: 22px;
+  /* 91.667% */
   margin-bottom: 20px;
 }
 
 .carsWrapper {
   display: flex;
-  width: 322px;
-  height: 151px;
+  /* width: 322px; */
+  height: 172px;
   padding: 10px;
   flex-direction: column;
   gap: 8px;
@@ -67,7 +71,7 @@
 .listItem {
   display: flex;
   gap: 10px;
-  padding: 9px;
+  padding: 9px 9px 18px 9px;
   align-items: center;
 }
 
@@ -87,8 +91,8 @@
 }
 
 .carIcon {
-  width: 18px;
-  height: 12px;
+  width: 25px;
+  height: 20px;
   flex-shrink: 0;
   fill: var(--light-gray);
 }
@@ -97,7 +101,8 @@
   text-align: center;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 129.412% */
+  line-height: 22px;
+  /* 129.412% */
 }
 
 .carMileage {
@@ -180,6 +185,9 @@
 
 .video {
   width: 100%;
+  height: calc(100dvh - 250px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bottomWrapper {
@@ -201,7 +209,7 @@
 }
 
 .carNumberWrapper {
-  width: 160px;
+  width: 161px;
   height: 100%;
   border-radius: 5px;
   border: 2px solid var(--black);
@@ -245,7 +253,7 @@
 }
 
 .btn {
-  width: 147px;
+  width: 148px;
   height: 100%;
   border-radius: 6px;
   background-color: #0a84ff;
@@ -297,7 +305,7 @@
   align-items: center;
   gap: 5px;
   background-color: var(--download-pdf-btn-bg);
-  padding: 1vh 16px;
+  padding: 10px 16px;
   border-radius: 6px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -436,7 +444,8 @@
   padding: 10px 20px;
   border-radius: 6px;
   background-color: #0a84ff;
-  margin-top: 38px;
+  margin-top: 28px;
+  margin-bottom: 10px;
   color: var(--white);
   border: none;
   outline: none;
@@ -452,7 +461,7 @@
   margin-left: auto;
   margin-right: auto;
   align-items: end;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .cancelBtn {

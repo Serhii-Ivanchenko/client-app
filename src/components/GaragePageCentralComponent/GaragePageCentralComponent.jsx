@@ -372,7 +372,7 @@ export default function GaragePageCentralComponent() {
       {recognitionLoading || mileageOrVinLoading ? (
         <LoaderSvg />
       ) : (
-        <div className={css.scrollContainer}>
+        <>
           {(cameraOn || cameraMileageOn || cameraVinOn) && (
             <>
               <div className={css.video}>
@@ -450,6 +450,7 @@ export default function GaragePageCentralComponent() {
                   })}
                 </div>
               </div>
+              <h3 className={css.header}>Додати авто</h3>
 
               {!photo ? (
                 <div className={css.cameraWrapper}>
@@ -710,7 +711,7 @@ export default function GaragePageCentralComponent() {
               </div>
             </>
           )}
-        </div>
+        </>
       )}
     </div>
   );
