@@ -112,6 +112,10 @@
   border-bottom: solid 1px var(--input-stroke);
 }
 
+.activeOption {
+  background-color: var(--main-gray);
+}
+
 .label {
   display: flex;
   gap: 10px;
