@@ -1,0 +1,45 @@
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 30px;
+    border-bottom: 0.333px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+}
+
+.userAvatar {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.controllersWrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.controllerItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--main-gray);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.controllerItem:hover {
+    background-color: var(--dark-gray);
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    fill: var(--light-gray);
+}

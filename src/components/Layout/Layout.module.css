@@ -4,14 +4,13 @@
   /* max-width: 390px; */
   width: 100vw;
   height: 100dvh;
-  padding: 8px 0px;
+  padding: 8px 0px 0px 0px;
   /* padding: 1.42vh 6px; */
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  background: var(--bg-secondary);
+  background: var(--bg-input);
   /* overscroll-behavior: none;
   touch-action: none; */
 }
-

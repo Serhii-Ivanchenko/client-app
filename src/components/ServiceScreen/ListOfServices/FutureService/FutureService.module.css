@@ -1,0 +1,109 @@
+.worksBox {
+  display: flex;
+  width: 100%;
+  padding: 10px 12px;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 5px;
+
+  border-radius: 6px;
+  background-color: var(--bg-secondary);
+
+  margin-bottom: 18px;
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  /* gap: 8px; */
+}
+
+.listItem {
+  display: flex;
+  /* align-items: center; */
+  gap: 5px;
+}
+
+.checkIcon {
+  width: 19px;
+  height: 19px;
+}
+
+.title,
+.workName {
+  color: var(--white);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.sumBox {
+  display: flex;
+  width: 126px;
+  height: 38px;
+  padding: 6px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  border-radius: 6px;
+  background-color: rgba(75, 164, 67, 0.08);
+}
+
+.receiptIcon {
+  width: 18px;
+  height: 18px;
+  fill: var(--white);
+}
+
+.sum {
+  color: #a1ffc5;
+
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btnCount {
+  display: flex;
+  width: 148px;
+  height: 38px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+
+  border-radius: 6px;
+  background: #0a84ff;
+}
+
+.sumInfoBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cardIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+
+  fill: var(--light-gray);
+}
+
+.text {
+  color: var(--light-gray);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: small-caps;
+}

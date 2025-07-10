@@ -13,6 +13,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import RestrictedRoute from '../RestrictedRoute.jsx';
 import PrivateRoute from '../PrivateRoute.jsx';
 import { Toaster } from 'react-hot-toast';
+import Header from '../Header/Header.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage.jsx'));
 const GaragePage = lazy(() => import('../../pages/GaragePage/GaragePage.jsx'));
@@ -20,8 +22,8 @@ const ServicePage = lazy(() =>
   import('../../pages/ServicePage/ServicePage.jsx')
 );
 const RepairPage = lazy(() => import('../../pages/RepairPage/RepairPage.jsx'));
-const HistoryPage = lazy(() =>
-  import('../../pages/HistoryPage/HistoryPage.jsx')
+const RecommendationsPage = lazy(() =>
+  import('../../pages/RecommendationsPage/RecommendationsPage.jsx')
 );
 
 const NotFoundPage = lazy(() =>
@@ -48,11 +50,8 @@ export default function App() {
         <LoaderSvg />
       ) : ( */}
       <Suspense fallback={<LoaderSvg />}>
-        {/* {location.pathname !== '/login' &&
-            location.pathname !== '/' &&
-            !isLoading &&
-            !isRefreshing && <TopPart />} */}
         <Toaster />
+        <Header />
         <Routes>
           {/* <Route
             path="/"
@@ -73,29 +72,30 @@ export default function App() {
             element={<GaragePage />}
           />
           <Route
-            path="/service/:carId"
+            path="/service"
             // element={
             //   <PrivateRoute redirectTo="/login" component={<ServicePage />} />
             // }
             element={<ServicePage />}
           />
           <Route
-            path="/repair/:carId"
+            path="/repair"
             // element={
             //   <PrivateRoute redirectTo="/login" component={<RepairPage />} />
             // }
             element={<RepairPage />}
           />
           <Route
-            path="/history/:carId"
+            path="/recommendations"
             // element={
-            //   <PrivateRoute redirectTo="/login" component={<HistoryPage />} />
+            //   <PrivateRoute redirectTo="/login" component={<RecommendationsPage />} />
             // }
-            element={<HistoryPage />}
+            element={<RecommendationsPage />}
           />
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <Footer />
       </Suspense>
       {/* )} */}
     </Layout>
