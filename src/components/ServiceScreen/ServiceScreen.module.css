@@ -8,10 +8,16 @@
   overflow-y: auto;
 }
 
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .topPartWrapper {
   display: flex;
+  flex-direction: column;
+  gap: 5px;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-bottom: 23px;
 }
 
