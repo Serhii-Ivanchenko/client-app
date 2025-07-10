@@ -19,6 +19,7 @@ import {
 } from '../../redux/cars/operations';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  selectCarInfo,
   selectIsMileageOrVinLoading,
   selectIsRecognitionLoading,
   selectMileageOrVin,
@@ -73,6 +74,7 @@ export default function GaragePageCentralComponent() {
 
   const recognitionLoading = useSelector(selectIsRecognitionLoading);
   const mileageOrVinLoading = useSelector(selectIsMileageOrVinLoading);
+  const carInfo = useSelector(selectCarInfo);
 
   const mileageOrVin = useSelector(selectMileageOrVin);
 
@@ -165,6 +167,29 @@ export default function GaragePageCentralComponent() {
           )
     );
   }, [chosenModel, yearSearchQuery, chosenMake]);
+
+  useEffect(() => {
+    if (!carInfo || Object.keys(carInfo).length === 0) return;
+
+    setPlate(carInfo?.license_plate);
+    setChosenYear(carInfo?.year);
+    setVin(carInfo?.vin || null);
+    setMileage(carInfo?.mileage || null);
+
+    const existedMake = carData?.find(
+      car => car?.make?.toLocaleLowerCase() === carInfo?.make?.toLowerCase()
+    );
+    setChosenMake({ id: existedMake?.id, make: existedMake?.make || '' });
+
+    const existedModel = existedMake?.models?.find(
+      model =>
+        model?.model_name?.toLowerCase() === carInfo?.model?.toLowerCase()
+    );
+    setChosenModel({
+      id: existedModel?.id,
+      model_name: existedModel?.model_name || '',
+    });
+  }, [carInfo]);
 
   useEffect(() => {
     const openCamera = async () => {
