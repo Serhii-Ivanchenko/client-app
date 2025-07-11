@@ -2,8 +2,20 @@ import { BsCheckLg } from 'react-icons/bs';
 import { BsReceipt } from 'react-icons/bs';
 import { BsFillCameraFill } from 'react-icons/bs';
 import css from './ServiceInfoDone.module.css';
+import { useEffect } from 'react';
+import { IoMdClose } from 'react-icons/io';
 
-export default function ServiceInfoDone({ item }) {
+export default function ServiceInfoDone({
+  item,
+  setCameraOn,
+  setCameraMileageOn,
+  photos,
+  setPhotos,
+}) {
+  // useEffect(() => {
+  //   setPhotos(item.photos);
+  // }, [item]);
+
   return (
     <div className={css.wrapper}>
       <div className={css.categoryTitle}>Діагностика</div>
@@ -39,7 +51,14 @@ export default function ServiceInfoDone({ item }) {
       <div className={css.photosPart}>
         <p className={css.photosPartTitle}>Фото поломки / документу</p>
         <div className={css.photosBox}>
-          <button type="button" className={css.cameraBtn}>
+          <button
+            type="button"
+            className={css.cameraBtn}
+            onClick={() => {
+              setCameraOn(true);
+              setCameraMileageOn(false);
+            }}
+          >
             <BsFillCameraFill className={css.cameraIcon} size={33} />
           </button>
           <ul className={css.photosList}>
