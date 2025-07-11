@@ -10,8 +10,12 @@ import {
 } from 'react-icons/bs';
 import avatar from '../../assets/images/avatar.png';
 import clsx from 'clsx';
+import { useState } from 'react';
+import EditProfileModal from './EditProfileModal/EditProfileModal';
 
 export default function ProfilePage({ onClose }) {
+  const [isEditOpen, setIsEditOpen] = useState(false);
+
   return (
     <div className={css.profileWrapper} onClick={onClose}>
       <div className={css.mainInfo} onClick={e => e.stopPropagation()}>
@@ -22,7 +26,10 @@ export default function ProfilePage({ onClose }) {
         <img src={avatar} alt="User avatar" className={css.avatar} />
         <p className={css.name}>Іван петренко</p>
         <p className={css.email}>ivan@gmail.com</p>
-        <button className={css.editBtn}>Редагувати профіль</button>
+        <button className={css.editBtn} onClick={() => setIsEditOpen(true)}>
+          Редагувати профіль
+        </button>
+        {isEditOpen && <EditProfileModal onClose={() => setIsEditOpen(false)} />}
 
         <div className={css.block}>
           <a href="#" className={css.link}>
@@ -54,7 +61,7 @@ export default function ProfilePage({ onClose }) {
             <span>Умови та правила</span>
           </a>
           <a href="#" className={css.link}>
-            < RiLogoutBoxRFill  className={clsx(css.icon, css.redIcon)}/>
+            <RiLogoutBoxRFill className={clsx(css.icon, css.redIcon)} />
             <span>Вийти</span>
           </a>
         </div>
