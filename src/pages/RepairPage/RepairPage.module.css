@@ -314,7 +314,7 @@
 
 /* Коли чат відкритий */
 .chatOpen {
-  transform: translateY(0%);
+  transform: translateY(-20%);
 }
 
 .chatContainer {
