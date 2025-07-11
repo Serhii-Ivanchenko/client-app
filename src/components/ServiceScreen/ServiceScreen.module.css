@@ -76,7 +76,7 @@
 }
 
 .mileageNumActive {
-  color: var(--main-gray);
+  color: var(--light-gray);
   font-size: 20px;
   font-weight: 600;
   width: 100%;
