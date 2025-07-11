@@ -170,11 +170,12 @@ export default function GaragePageCentralComponent() {
 
   useEffect(() => {
     if (!carInfo || Object.keys(carInfo).length === 0) return;
+    console.log('carInfo', carInfo);
 
     setPlate(carInfo?.license_plate);
     setChosenYear(carInfo?.year);
-    setVin(carInfo?.vin || null);
-    setMileage(carInfo?.mileage || null);
+    setVin(carInfo?.vin);
+    setMileage(carInfo?.mileage);
 
     const existedMake = carData?.find(
       car => car?.make?.toLocaleLowerCase() === carInfo?.make?.toLowerCase()
@@ -361,10 +362,10 @@ export default function GaragePageCentralComponent() {
     };
 
     const photoToSend = dataURLtoBlob(photo);
-    dispatch(recognizeLicensePlate(photoToSend))
-      .unwrap()
-      .then(result => setPlate(result?.license_plate))
-      .catch(err => console.log(err));
+    dispatch(recognizeLicensePlate(photoToSend));
+    // .unwrap()
+    // .then(result => setPlate(result?.license_plate))
+    // .catch(err => console.log(err));
   };
 
   return (

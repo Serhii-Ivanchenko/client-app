@@ -7,29 +7,28 @@
   overflow-y: auto;
 }
 
-/* 
-.scrollContainer {
+/* .scrollContainer {
   overflow: hidden;
   overflow-y: auto;
   width: 100%;
   height: 100%;
   padding-right: 15px;
-}
+} */
 
-.scrollContainer::-webkit-scrollbar {
+.pageWrapper::-webkit-scrollbar {
   width: 8px;
 }
 
-.scrollContainer::-webkit-scrollbar-track {
+.pageWrapper::-webkit-scrollbar-track {
   border-radius: 4px;
   background-color: var(--bg-secondary);
 }
 
-.scrollContainer::-webkit-scrollbar-thumb {
+.pageWrapper::-webkit-scrollbar-thumb {
   width: 8px;
   border-radius: 4px;
   background-color: var(--main-gray);
-} */
+}
 
 .header {
   color: var(--white);
