@@ -102,7 +102,7 @@
 }
 
 .submit:disabled {
-  background-color: transparent;
+  background-color: var(--main-gray);
   cursor: auto;
-  color: var(--input-text);
+  color: var(--bg-secondary);
 }

@@ -177,7 +177,7 @@ export default function LoginForm({
       <p className={css.linkText}>
         Ще не маєте акаунт?{' '}
         <span
-          className={css.link}
+          className={`${css.link} ${css.registerLink}`}
           onClick={() => {
             setLoginFormOpen(false);
             setForgotPasswordOpen(true);
