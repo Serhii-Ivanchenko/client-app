@@ -33,8 +33,8 @@ const NotFoundPage = lazy(() =>
 
 export default function App() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-const handleAvatarClick = () => setIsProfileOpen(true);
-const handleCloseProfile = () => setIsProfileOpen(false);
+  const handleAvatarClick = () => setIsProfileOpen(true);
+  const handleCloseProfile = () => setIsProfileOpen(false);
   // const dispatch = useDispatch();
   // const isLoading = useSelector(selectLoading);
   // const isRefreshing = useSelector(selectIsRefreshing);
@@ -55,56 +55,59 @@ const handleCloseProfile = () => setIsProfileOpen(false);
       ) : ( */}
       <Suspense fallback={<LoaderSvg />}>
         <Toaster />
-        <Header  onAvatarClick={handleAvatarClick} />
+        <Header onAvatarClick={handleAvatarClick} />
         <div className={css.mainWrapper}>
-          {isProfileOpen ? (
+          {/* {isProfileOpen ? (
             <ProfilePage onClose={handleCloseProfile} />
-          ) : (
-
-        <Routes>
-          {/* <Route
+          ) : ( */}
+          <ProfilePage
+            onClose={handleCloseProfile}
+            isProfileOpen={isProfileOpen}
+          />
+          <Routes>
+            {/* <Route
             path="/"
             element={
               isLoggedIn ? <Navigate to={'/garage'} replace /> : <LoginPage />
             }
           /> */}
-          <Route
-            path="/login"
-            // element={<RestrictedRoute component={<LoginPage />} />}
-            element={<LoginPage />}
-          />
-          <Route
-            path="/garage"
-            // element={
-            //   <PrivateRoute redirectTo="/login" component={<GaragePage />} />
-            // }
-            element={<GaragePage />}
-          />
-          <Route
-            path="/service"
-            // element={
-            //   <PrivateRoute redirectTo="/login" component={<ServicePage />} />
-            // }
-            element={<ServicePage />}
-          />
-          <Route
-            path="/repair"
-            // element={
-            //   <PrivateRoute redirectTo="/login" component={<RepairPage />} />
-            // }
-            element={<RepairPage />}
-          />
-          <Route
-            path="/recommendations"
-            // element={
-            //   <PrivateRoute redirectTo="/login" component={<RecommendationsPage />} />
-            // }
-            element={<RecommendationsPage />}
-          />
+            <Route
+              path="/login"
+              // element={<RestrictedRoute component={<LoginPage />} />}
+              element={<LoginPage />}
+            />
+            <Route
+              path="/garage"
+              // element={
+              //   <PrivateRoute redirectTo="/login" component={<GaragePage />} />
+              // }
+              element={<GaragePage />}
+            />
+            <Route
+              path="/service"
+              // element={
+              //   <PrivateRoute redirectTo="/login" component={<ServicePage />} />
+              // }
+              element={<ServicePage />}
+            />
+            <Route
+              path="/repair"
+              // element={
+              //   <PrivateRoute redirectTo="/login" component={<RepairPage />} />
+              // }
+              element={<RepairPage />}
+            />
+            <Route
+              path="/recommendations"
+              // element={
+              //   <PrivateRoute redirectTo="/login" component={<RecommendationsPage />} />
+              // }
+              element={<RecommendationsPage />}
+            />
 
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        )}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+          {/* )} */}
         </div>
         <Footer />
       </Suspense>

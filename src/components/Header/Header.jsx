@@ -4,9 +4,6 @@ import { BsBellFill } from 'react-icons/bs';
 import { PiHeadsetFill } from 'react-icons/pi';
 
 export default function Header({onAvatarClick}) {
-  // const handleAvatarClick = () => {
-  //   console.log('Avatar clicked');
-  // };
 
   const handleBellClick = () => {
     console.log('Bell clicked');
