@@ -1,14 +1,30 @@
 import { useState } from 'react';
 import css from './EditProfileModal.module.css';
 import { IoCloseOutline } from 'react-icons/io5';
-import { BsPencil } from "react-icons/bs";
-import avatar from '../../../assets/images/avatar.png';
+import { BsPencil } from 'react-icons/bs';
 
-export default function EditProfileModal({ onClose }) {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+export default function EditProfileModal({ onClose, onSave, initialData }) {
+  const [name, setName] = useState(initialData.name || '');
+  const [surname, setSurname] = useState(initialData.surname || '');
+  const [email, setEmail] = useState(initialData.email || '');
+  const [phone, setPhone] = useState(initialData.phone || '');
+  const [avatarFile, setAvatarFile] = useState(null);
+
+const handleSave = () => {
+  const updatedAvatar = avatarFile
+    ? URL.createObjectURL(avatarFile)
+    : initialData.avatar;
+
+  onSave({
+    name,
+    surname,
+    email,
+    phone,
+    avatar: updatedAvatar,
+  });
+
+  onClose();
+};
 
   return (
     <div className={css.backdrop} onClick={onClose}>
@@ -20,9 +36,19 @@ export default function EditProfileModal({ onClose }) {
         <h2 className={css.title}>Редагування профілю</h2>
 
         <label className={css.avatarLabel}>
-          <img src={avatar} alt="avatar" className={css.avatar} />
-          <BsPencil  className={css.editIcon} />
-          <input type="file" className={css.avatarInput} />
+          <img
+            src={
+              avatarFile ? URL.createObjectURL(avatarFile) : initialData.avatar
+            }
+            alt="avatar"
+            className={css.avatar}
+          />
+          <BsPencil className={css.editIcon} />
+          <input
+            type="file"
+            className={css.avatarInput}
+            onChange={e => setAvatarFile(e.target.files[0])}
+          />
         </label>
 
         <input
@@ -30,31 +56,36 @@ export default function EditProfileModal({ onClose }) {
           className={css.input}
           value={name}
           onChange={e => setName(e.target.value)}
-          placeholder="Іван"
+          placeholder="Ім’я"
         />
+
         <input
           type="text"
           className={css.input}
           value={surname}
           onChange={e => setSurname(e.target.value)}
-          placeholder="Петренко"
+          placeholder="Прізвище"
         />
+
         <input
           type="tel"
           className={css.input}
           value={phone}
           onChange={e => setPhone(e.target.value)}
-          placeholder="+38..."
+          placeholder="+380..."
         />
+
         <input
           type="email"
           className={css.input}
           value={email}
           onChange={e => setEmail(e.target.value)}
-          placeholder="ivan@gmail.com"
+          placeholder="Email"
         />
 
-        <button className={css.saveBtn}>Зберегти</button>
+        <button className={css.saveBtn} onClick={handleSave}>
+          Зберегти
+        </button>
       </div>
     </div>
   );

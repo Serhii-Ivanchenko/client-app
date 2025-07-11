@@ -15,6 +15,18 @@ import EditProfileModal from './EditProfileModal/EditProfileModal';
 
 export default function ProfilePage({ onClose }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
+  const [userData, setUserData] = useState({
+    name: 'Іван',
+    surname: 'Петренко',
+    email: 'ivan@gmail.com',
+    phone: '+380939621777',
+    avatar: avatar,
+  });
+
+  const handleSaveProfile = updatedData => {
+    setUserData(prev => ({ ...prev, ...updatedData }));
+    setIsEditOpen(false);
+  };
 
   return (
     <div className={css.profileWrapper} onClick={onClose}>
@@ -23,13 +35,19 @@ export default function ProfilePage({ onClose }) {
           <IoCloseOutline className={css.closeIcon} />
         </button>
 
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>Іван петренко</p>
-        <p className={css.email}>ivan@gmail.com</p>
+        <img src={userData.avatar} alt="User avatar" className={css.avatar} />
+        <p className={css.name}>
+          {userData.name} {userData.surname}
+        </p>
+        <p className={css.email}>{userData.email}</p>
+
         <button className={css.editBtn} onClick={() => setIsEditOpen(true)}>
           Редагувати профіль
         </button>
-        {isEditOpen && <EditProfileModal onClose={() => setIsEditOpen(false)} />}
+        {isEditOpen && (
+          <EditProfileModal  onSave={handleSaveProfile}     initialData={userData}
+ onClose={() => setIsEditOpen(false)} />
+        )}
 
         <div className={css.block}>
           <a href="#" className={css.link}>
