@@ -346,7 +346,7 @@ export const getMileageOrVinFromPhoto = createAsyncThunk(
         photo,
         {
           headers: {
-            // 'X-Api-Key': 'YA7NxysJ',
+            'X-Api-Key': 'YA7NxysJ',
             'Content-Type': 'application/json',
           },
         }

@@ -7,7 +7,7 @@ import { BsCalendar2Week } from 'react-icons/bs';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import { format, addDays, subDays } from 'date-fns';
-import { useState, forwardRef } from 'react';
+import { useState, forwardRef, useEffect } from 'react';
 import clsx from 'clsx';
 import './CalendarStyles.css';
 import { registerLocale } from 'react-datepicker';
@@ -19,14 +19,134 @@ registerLocale('uk', uk);
 
 export default function CreateARecord() {
   // const selectedDate = useSelector(selectDate);
+  const [chosenTime, setChosenTime] = useState([]);
   const [startDate, setStartDate] = useState(new Date());
   const [chosenCity, setChosenCity] = useState('');
   const [chosenService, setChosenService] = useState('');
   const [newValue, setNewValue] = useState('');
+  const [pickedDate, setPickedDate] = useState(
+    new Date(startDate).toLocaleDateString()
+  );
+
+  // const setNewDate = date => {
+  //   setPickedDate(date);
+  // };
+
+  useEffect(() => {
+    setPickedDate(startDate.toLocaleDateString());
+  }, [startDate]);
+
+  const [datesArray, setDatesArray] = useState([]);
+  const [booking, setBooking] = useState([]);
+
+  // console.log('chosenTime', chosenTime);
+  // console.log('pickedDate', pickedDate);
 
   const handleChange = e => {
     setNewValue(e.target.value);
   };
+
+  const onTimeBtnClick = time => {
+    setChosenTime(prevValues => {
+      const existingDate = prevValues.find(
+        item => item.appointment_date === pickedDate
+      );
+
+      if (existingDate) {
+        let updatedTimes = existingDate.times.includes(time)
+          ? existingDate.times.filter(t => t !== time)
+          : [...existingDate.times, time];
+
+        updatedTimes = updatedTimes.sort();
+
+        return updatedTimes.length > 0
+          ? prevValues.map(item =>
+              item.appointment_date === pickedDate
+                ? { ...item, times: updatedTimes }
+                : item
+            )
+          : prevValues.filter(item => item.appointment_date !== pickedDate);
+      } else {
+        return [
+          ...prevValues,
+          { appointment_date: pickedDate, times: [time].sort() },
+        ];
+      }
+    });
+  };
+
+  useEffect(() => {
+    const dataForBooking = chosenTime?.map(({ appointment_date, times }) => ({
+      appointment_date: appointment_date.split('.').reverse().join('-'),
+      times,
+    }));
+
+    const datesArray = chosenTime?.map(({ appointment_date, times }) => ({
+      appointment_date: appointment_date.split('.').reverse().join('-'),
+      start_time: times[0],
+      end_time: times[times.length - 1],
+    }));
+    setDatesArray(datesArray);
+    setBooking(dataForBooking);
+  }, [setDatesArray, chosenTime, setBooking]);
+  // console.log('chosenTime', chosenTime);
+
+  const isChosenDate = chosenTime?.find(item => {
+    return item.appointment_date === pickedDate;
+  });
+  const chosenHours = isChosenDate?.times;
+
+  useEffect(() => {
+    // if (!recordId) {
+    //   return;
+    // }
+
+    // const recordById = dayRecords?.find(dayRecord => {
+    //   return dayRecord.car_id === recordId;
+    // });
+
+    // const bookingTime = recordById?.booking;
+
+    // const newArr = bookingTime?.map(({ appointment_date, times }) => ({
+    //   appointment_date: appointment_date.split("-").reverse().join("."),
+    //   times,
+    // }));
+
+    let timeArray = [];
+    let datesArray = [];
+    // if (car && car.status === 'new') {
+    //   timeArray = [];
+    //   datesArray = [];
+    // } else {
+    //   datesArray = recordById?.appointment_dates?.split(',');
+    //   timeArray = recordById?.time_slots?.split(',');
+    // }
+
+    // console.log('datesArray', datesArray);
+    // console.log('timeArray', timeArray);
+
+    const grouped = {};
+
+    datesArray?.forEach((dateStr, idx) => {
+      const formattedDate = new Date(dateStr).toLocaleDateString('uk-UA'); // "23.04.2025"
+      if (!grouped[formattedDate]) {
+        grouped[formattedDate] = [];
+      }
+      grouped[formattedDate].push(timeArray[idx]);
+    });
+    // console.log('grouped', grouped);
+
+    const result = Object.entries(grouped).map(([date, times]) => ({
+      appointment_date: date,
+      times,
+    }));
+    // console.log('result', result);
+
+    setChosenTime(prevValues => {
+      return result ? result : prevValues;
+    });
+    // setChosenTime(newArr);
+  }, []);
 
   const CustomInput = forwardRef(({ value, onClick }, ref) => (
     <div className={css.datePickerWrapper}>
@@ -117,26 +237,25 @@ export default function CreateARecord() {
                 type="button"
                 className={clsx(
                   css.timeBtn,
-                  css.timeBtnFree
-                  //   !recordId &&
-                  //     value === 1 &&
-                  //     !chosenHours?.includes(transformedTime) &&
-                  //     css.timeBtnDisabled,
-                  //   recordId &&
-                  //     car &&
-                  //     value === 1 &&
-                  //     !chosenHours?.includes(transformedTime) &&
-                  //     css.timeBtnDisabled,
-                  //   recordId &&
-                  //     !car &&
-                  //     value === 1 &&
-                  //     chosenHours?.includes(transformedTime) &&
-                  //     css.timeBtnChosen,
-                  //   chosenHours?.includes(transformedTime) && css.timeBtnChosen
+                  css.timeBtnFree,
+                  // !recordId &&
+                  //   value === 1 &&
+                  //   !chosenHours?.includes(transformedTime) &&
+                  //   css.timeBtnDisabled,
+                  // recordId &&
+                  //   car &&
+                  //   value === 1 &&
+                  //   !chosenHours?.includes(transformedTime) &&
+                  //   css.timeBtnDisabled,
+                  // recordId &&
+                  //   !car &&
+                  //   value === 1 &&
+                  chosenHours?.includes(transformedTime) && css.timeBtnChosen,
+                  chosenHours?.includes(transformedTime) && css.timeBtnChosen
                 )}
                 key={index}
                 onClick={() => {
-                  // onTimeBtnClick(transformedTime, value);
+                  onTimeBtnClick(transformedTime, value);
                 }}
                 // disabled={
                 //   (hour.split(':')[0] <= new Date().getHours() &&
