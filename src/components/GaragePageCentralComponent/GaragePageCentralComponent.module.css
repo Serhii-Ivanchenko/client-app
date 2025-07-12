@@ -14,7 +14,7 @@
   height: 100%;
   padding-right: 15px;
 } */
-
+/* 
 .pageWrapper::-webkit-scrollbar {
   width: 8px;
 }
@@ -28,7 +28,7 @@
   width: 8px;
   border-radius: 4px;
   background-color: var(--main-gray);
-}
+} */
 
 .header {
   color: var(--white);
