@@ -6,8 +6,10 @@ import ListOfServices from './ListOfServices/ListOfServices';
 import car from '../../assets/images/autoPhoto.webp';
 import { useEffect, useRef, useState } from 'react';
 import { getMileageOrVinFromPhoto } from '../../redux/cars/operations';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Camera from './Camera/Camera';
+import { selectIsMileageOrVinLoading } from '../../redux/cars/selectors';
+import LoaderSvg from '../Loader/LoaderSvg';
 
 const services = [
   {
@@ -88,13 +90,14 @@ export default function ServiceScreen(params) {
   const inputRef = useRef();
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+  const mileageLoading = useSelector(selectIsMileageOrVinLoading);
 
   const dispatch = useDispatch();
 
   const filteredServices = services.sort((a, b) => a.mileage - b.mileage);
 
   const handleChange = e => {
-    setNewValue(e.target.value);
+    setMileage(e.target.value);
   };
 
   // useEffect(() => {
@@ -262,24 +265,32 @@ export default function ServiceScreen(params) {
               <SlSpeedometer className={css.mileageIcon} />
 
               {/* {activeInput ? ( */}
-              <input
-                className={css.mileageNumActive}
-                value={newValue}
-                onChange={e => handleChange(e)}
-                ref={inputRef}
-                placeholder="257 000"
-              />
+              {mileageLoading ? (
+                'Зачекайте...'
+              ) : (
+                <>
+                  <input
+                    className={css.mileageNumActive}
+                    value={mileage}
+                    onChange={e => handleChange(e)}
+                    ref={inputRef}
+                    placeholder="257 000"
+                  />
+                  <p
+                    className={css.mileage}
+                    onClick={() => setActiveInput(true)}
+                    onBlur={() => setActiveInput(false)}
+                  >
+                    {' '}
+                    км
+                  </p>
+                </>
+              )}
+
               {/* ) : (
               <span className={css.mileageNum}>{newValue}</span>
             )}{' '} */}
-              <p
-                className={css.mileage}
-                onClick={() => setActiveInput(true)}
-                onBlur={() => setActiveInput(false)}
-              >
-                {' '}
-                км
-              </p>
+
               {/* <input
             className={css.mileageNumActive}
             value={newValue}
